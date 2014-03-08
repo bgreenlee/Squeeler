@@ -654,10 +654,10 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="8xH-DK-kBQ">
             <items>
-                <menuItem title="Preferences..." id="y2p-R6-bNe">
+                <menuItem title="About" id="y2p-R6-bNe">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="doSomething:" target="494" id="omF-fm-oxZ"/>
+                        <action selector="showAbout:" target="494" id="x07-BR-KmJ"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit" id="M2P-tD-wOb">

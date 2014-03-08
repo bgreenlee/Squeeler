@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A211628718BA9A4900C0FC58 /* HCAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211628618BA9A4900C0FC58 /* HCAboutWindow.xib */; };
+		A211629018BAA4C000C0FC58 /* HCAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211628E18BAA4C000C0FC58 /* HCAboutWindowController.m */; };
 		A219175D18B5980800C9256F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A219175C18B5980800C9256F /* Cocoa.framework */; };
 		A219176718B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219176518B5980800C9256F /* InfoPlist.strings */; };
 		A219176918B5980800C9256F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A219176818B5980800C9256F /* main.m */; };
@@ -19,6 +21,10 @@
 		A219178518B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219178318B5980800C9256F /* InfoPlist.strings */; };
 		A219178718B5980800C9256F /* HogCallerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219178618B5980800C9256F /* HogCallerTests.m */; };
 		A219179218B7BB4200C9256F /* HCProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* HCProcessTracker.m */; };
+		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
+		A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3018CADF9F005E4926 /* statusbar-alternate.png */; };
+		A2773A3318CADF9F005E4926 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3118CADF9F005E4926 /* statusbar.png */; };
+		A2773A3518CAE382005E4926 /* HogCallerAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3418CAE382005E4926 /* HogCallerAbout.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A211628618BA9A4900C0FC58 /* HCAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HCAboutWindow.xib; sourceTree = "<group>"; };
+		A211628D18BAA4C000C0FC58 /* HCAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCAboutWindowController.h; sourceTree = "<group>"; };
+		A211628E18BAA4C000C0FC58 /* HCAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCAboutWindowController.m; sourceTree = "<group>"; };
 		A219175918B5980800C9256F /* HogCaller.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HogCaller.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A219175C18B5980800C9256F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A219175F18B5980800C9256F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -53,6 +62,10 @@
 		A219178618B5980800C9256F /* HogCallerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HogCallerTests.m; sourceTree = "<group>"; };
 		A219179018B7BB4200C9256F /* HCProcessTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCProcessTracker.h; sourceTree = "<group>"; };
 		A219179118B7BB4200C9256F /* HCProcessTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCProcessTracker.m; sourceTree = "<group>"; };
+		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
+		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
+		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
+		A2773A3418CAE382005E4926 /* HogCallerAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HogCallerAbout.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +136,9 @@
 				A219179018B7BB4200C9256F /* HCProcessTracker.h */,
 				A219179118B7BB4200C9256F /* HCProcessTracker.m */,
 				A219177118B5980800C9256F /* MainMenu.xib */,
+				A211628D18BAA4C000C0FC58 /* HCAboutWindowController.h */,
+				A211628E18BAA4C000C0FC58 /* HCAboutWindowController.m */,
+				A211628618BA9A4900C0FC58 /* HCAboutWindow.xib */,
 				A219177418B5980800C9256F /* Images.xcassets */,
 				A219176318B5980800C9256F /* Supporting Files */,
 			);
@@ -132,6 +148,10 @@
 		A219176318B5980800C9256F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A2773A3418CAE382005E4926 /* HogCallerAbout.png */,
+				A2773A3018CADF9F005E4926 /* statusbar-alternate.png */,
+				A2773A3118CADF9F005E4926 /* statusbar.png */,
+				A2773A2E18CAD6FC005E4926 /* icon.icns */,
 				A219176418B5980800C9256F /* HogCaller-Info.plist */,
 				A219176518B5980800C9256F /* InfoPlist.strings */,
 				A219176818B5980800C9256F /* main.m */,
@@ -239,10 +259,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2773A2F18CAD801005E4926 /* icon.icns in Resources */,
+				A2773A3318CADF9F005E4926 /* statusbar.png in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
+				A211628718BA9A4900C0FC58 /* HCAboutWindow.xib in Resources */,
+				A2773A3518CAE382005E4926 /* HogCallerAbout.png in Resources */,
 				A219176D18B5980800C9256F /* Credits.rtf in Resources */,
 				A219177318B5980800C9256F /* MainMenu.xib in Resources */,
+				A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +288,7 @@
 			files = (
 				A219176918B5980800C9256F /* main.m in Sources */,
 				A219179218B7BB4200C9256F /* HCProcessTracker.m in Sources */,
+				A211629018BAA4C000C0FC58 /* HCAboutWindowController.m in Sources */,
 				A219177018B5980800C9256F /* HCAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

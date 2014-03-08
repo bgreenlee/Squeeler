@@ -9,6 +9,7 @@
 #import "HCAppDelegate.h"
 
 @implementation HCAppDelegate
+@synthesize aboutWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
@@ -19,13 +20,13 @@
 
 - (void)awakeFromNib {
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-//    NSBundle *bundle = [NSBundle mainBundle];
-//    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Icon1" ofType:@"png"]];
-//    statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"Icon2" ofType:@"png"]];
-    //    [statusItem setAlternateImage:statusHighlightImage];
-    [statusItem setTitle:@"Hog"];
+    NSBundle *bundle = [NSBundle mainBundle];
+    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"statusbar" ofType:@"png"]];
+    [statusItem setImage:statusImage];
+    statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"statusbar-alternate" ofType:@"png"]];
+    [statusItem setAlternateImage:statusHighlightImage];
     [statusItem setMenu:statusMenu];
-    [statusItem setToolTip:@"Hog Caller"];
+    [statusItem setToolTip:@"Squeeler"];
     [statusItem setHighlightMode:YES];
 }
 
@@ -61,11 +62,12 @@
     
 }
 
-- (IBAction)doSomething:(id)sender {
-//    [NSApp activateIgnoringOtherApps:YES];
-//    NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
-//    NSArray *apps = [workspace runningApplications];
-//    NSLog(@"Processes: %@", apps);
+- (IBAction)showAbout:(id)sender {
+    if (aboutWindowController == nil) {
+        aboutWindowController = [[HCAboutWindowController alloc] init];
+    }
+    [aboutWindowController showWindow:self];
+    [[aboutWindowController window] setReleasedWhenClosed:NO];
 }
 
 @end

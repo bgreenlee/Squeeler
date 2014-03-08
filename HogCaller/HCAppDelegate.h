@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "HCProcessTracker.h"
+#import "HCAboutWindowController.h"
 
 @interface HCAppDelegate : NSObject <NSApplicationDelegate, HCProcessTrackerDelegate, NSUserNotificationCenterDelegate, NSUserNotificationCenterDelegate> {
     IBOutlet NSMenu *statusMenu;
@@ -17,8 +18,8 @@
     HCProcessTracker *processTracker;
 }
 
-- (IBAction)doSomething:(id)sender;
+- (IBAction)showAbout:(id)sender;
 
 @property (assign) IBOutlet NSWindow *window;
-
+@property (strong) HCAboutWindowController* aboutWindowController;
 @end
