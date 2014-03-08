@@ -9,8 +9,8 @@
 #import <Foundation/Foundation.h>
 
 #define CHECK_INTERVAL 5  // number of seconds between process checks
-#define CPU_THRESHOLD 10  // percent CPU usage before we start counting
-#define COUNTER_THRESHOLD 1  // number of CHECK_INTERVAL "ticks" before we alert
+#define CPU_THRESHOLD 90  // percent CPU usage before we start counting
+#define COUNTER_THRESHOLD 12  // number of CHECK_INTERVAL "ticks" before we alert
 #define ALERT_RESET_TIMEOUT 300  // number of seconds before we will alert again on a particular process
 
 @class SQProcessTracker;
