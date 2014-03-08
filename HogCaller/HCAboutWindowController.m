@@ -24,8 +24,9 @@
     [super windowDidLoad];
 
     // set version
-    NSString *_version = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
-    [version setStringValue:_version];
+    NSString *semanticVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+    NSString *build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    [version setStringValue:[NSString stringWithFormat:@"%@ build %@", semanticVersion, build]];
     
     [self.window center];
 }

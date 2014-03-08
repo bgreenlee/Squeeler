@@ -63,7 +63,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqj-pL-x1J">
-                        <rect key="frame" x="179" y="113" width="48" height="17"/>
+                        <rect key="frame" x="179" y="113" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="???" id="2aR-LV-pKe">
                             <font key="font" metaFont="smallSystem"/>
