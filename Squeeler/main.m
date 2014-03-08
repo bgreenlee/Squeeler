@@ -1,6 +1,6 @@
 //
 //  main.m
-//  HogCaller
+//  Squeeler
 //
 //  Created by Brad Greenlee on 2/19/14.
 //  Copyright (c) 2014 HackArts. All rights reserved.

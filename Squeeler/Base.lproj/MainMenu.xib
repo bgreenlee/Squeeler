@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
@@ -13,10 +13,10 @@
         <customObject id="-3" userLabel="Application"/>
         <menu title="AMainMenu" systemMenu="main" id="29">
             <items>
-                <menuItem title="HogCaller" id="56">
-                    <menu key="submenu" title="HogCaller" systemMenu="apple" id="57">
+                <menuItem title="Squeeler" id="56">
+                    <menu key="submenu" title="Squeeler" systemMenu="apple" id="57">
                         <items>
-                            <menuItem title="About HogCaller" id="58">
+                            <menuItem title="About Squeeler" id="58">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
                                     <action selector="orderFrontStandardAboutPanel:" target="-2" id="142"/>
@@ -35,7 +35,7 @@
                             <menuItem isSeparatorItem="YES" id="144">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Hide HogCaller" keyEquivalent="h" id="134">
+                            <menuItem title="Hide Squeeler" keyEquivalent="h" id="134">
                                 <connections>
                                     <action selector="hide:" target="-1" id="367"/>
                                 </connections>
@@ -54,7 +54,7 @@
                             <menuItem isSeparatorItem="YES" id="149">
                                 <modifierMask key="keyEquivalentModifierMask" command="YES"/>
                             </menuItem>
-                            <menuItem title="Quit HogCaller" keyEquivalent="q" id="136">
+                            <menuItem title="Quit Squeeler" keyEquivalent="q" id="136">
                                 <connections>
                                     <action selector="terminate:" target="-3" id="449"/>
                                 </connections>
@@ -636,7 +636,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <menu key="submenu" title="Help" systemMenu="help" id="491">
                         <items>
-                            <menuItem title="HogCaller Help" keyEquivalent="?" id="492">
+                            <menuItem title="Squeeler Help" keyEquivalent="?" id="492">
                                 <connections>
                                     <action selector="showHelp:" target="-1" id="493"/>
                                 </connections>
@@ -646,7 +646,7 @@
                 </menuItem>
             </items>
         </menu>
-        <customObject id="494" customClass="HCAppDelegate">
+        <customObject id="494" customClass="SQAppDelegate">
             <connections>
                 <outlet property="statusMenu" destination="8xH-DK-kBQ" id="h6z-7h-7qV"/>
             </connections>

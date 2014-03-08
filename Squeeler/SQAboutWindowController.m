@@ -1,22 +1,22 @@
 //
-//  HCAboutWindowController.m
-//  HogCaller
+//  SQAboutWindowController.m
+//  Squeeler
 //
 //  Created by Brad Greenlee on 2/23/14.
 //  Copyright (c) 2014 HackArts. All rights reserved.
 //
 
-#import "HCAboutWindowController.h"
+#import "SQAboutWindowController.h"
 
-@interface HCAboutWindowController ()
+@interface SQAboutWindowController ()
 
 @end
 
-@implementation HCAboutWindowController
+@implementation SQAboutWindowController
 @synthesize version;
 
 - (id)init {
-    self = [super initWithWindowNibName:@"HCAboutWindow"];
+    self = [super initWithWindowNibName:@"SQAboutWindow"];
     return self;
 }
 

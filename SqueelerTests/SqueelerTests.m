@@ -1,6 +1,6 @@
 //
-//  HogCallerTests.m
-//  HogCallerTests
+//  SqueelerTests.m
+//  SqueelerTests
 //
 //  Created by Brad Greenlee on 2/19/14.
 //  Copyright (c) 2014 HackArts. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface HogCallerTests : XCTestCase
+@interface SqueelerTests : XCTestCase
 
 @end
 
-@implementation HogCallerTests
+@implementation SqueelerTests
 
 - (void)setUp
 {

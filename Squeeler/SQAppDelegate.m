@@ -1,20 +1,20 @@
 //
-//  HCAppDelegate.m
-//  HogCaller
+//  SQAppDelegate.m
+//  Squeeler
 //
 //  Created by Brad Greenlee on 2/19/14.
 //  Copyright (c) 2014 HackArts. All rights reserved.
 //
 
-#import "HCAppDelegate.h"
+#import "SQAppDelegate.h"
 
-@implementation HCAppDelegate
+@implementation SQAppDelegate
 @synthesize aboutWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
-    processTracker = [[HCProcessTracker alloc] initWithDelegate:self];
+    processTracker = [[SQProcessTracker alloc] initWithDelegate:self];
     [processTracker start];
 }
 
@@ -64,7 +64,7 @@
 
 - (IBAction)showAbout:(id)sender {
     if (aboutWindowController == nil) {
-        aboutWindowController = [[HCAboutWindowController alloc] init];
+        aboutWindowController = [[SQAboutWindowController alloc] init];
     }
     [aboutWindowController showWindow:self];
     [[aboutWindowController window] setReleasedWhenClosed:NO];

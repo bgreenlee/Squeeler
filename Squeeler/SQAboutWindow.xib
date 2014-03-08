@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="4514"/>
     </dependencies>
     <objects>
-        <customObject id="-2" userLabel="File's Owner" customClass="HCAboutWindowController">
+        <customObject id="-2" userLabel="File's Owner" customClass="SQAboutWindowController">
             <connections>
                 <outlet property="version" destination="nqj-pL-x1J" id="Z7Q-LO-vzu"/>
                 <outlet property="window" destination="TyV-sw-yip" id="FVt-4F-EYg"/>
@@ -15,19 +15,19 @@
         <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="TyV-sw-yip" customClass="NSPanel">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" utility="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="139" y="81" width="334" height="177"/>
+            <rect key="contentRect" x="139" y="81" width="335" height="178"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="878"/>
             <view key="contentView" id="VLY-iA-2lZ">
-                <rect key="frame" x="0.0" y="0.0" width="334" height="177"/>
+                <rect key="frame" x="0.0" y="0.0" width="335" height="178"/>
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt4-aL-iLq">
-                        <rect key="frame" x="20" y="61" width="96" height="96"/>
+                        <rect key="frame" x="20" y="62" width="96" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="HogCallerAbout" id="t1V-Oa-vcm"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SqueelerAbout" id="t1V-Oa-vcm"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aok-2h-v3a">
-                        <rect key="frame" x="135" y="138" width="92" height="19"/>
+                        <rect key="frame" x="135" y="139" width="92" height="19"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Squeeler" id="QSh-Ti-CaH">
                             <font key="font" metaFont="system" size="16"/>
@@ -36,7 +36,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AQO-a9-Ne6">
-                        <rect key="frame" x="135" y="113" width="48" height="17"/>
+                        <rect key="frame" x="135" y="96" width="48" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Version" id="fhc-6Z-Akp">
                             <font key="font" metaFont="smallSystem"/>
@@ -54,7 +54,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sLy-r3-ve9">
-                        <rect key="frame" x="135" y="77" width="238" height="28"/>
+                        <rect key="frame" x="135" y="45" width="238" height="28"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="By Brad Greenlee brad@hackarts.com" id="sZR-Oz-NH4">
                             <font key="font" metaFont="smallSystem"/>
@@ -63,9 +63,18 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nqj-pL-x1J">
-                        <rect key="frame" x="179" y="113" width="69" height="17"/>
+                        <rect key="frame" x="179" y="96" width="69" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" allowsUndo="NO" sendsActionOnEndEditing="YES" title="???" id="2aR-LV-pKe">
+                            <font key="font" metaFont="smallSystem"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h60-gh-T51">
+                        <rect key="frame" x="135" y="121" width="194" height="14"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Alerts when processes hog CPU" id="emT-Vp-ysx">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -76,6 +85,6 @@
         </window>
     </objects>
     <resources>
-        <image name="HogCallerAbout" width="96" height="96"/>
+        <image name="SqueelerAbout" width="96" height="96"/>
     </resources>
 </document>

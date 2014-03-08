@@ -1,14 +1,14 @@
 //
-//  HCProcessTracker.m
-//  HogCaller
+//  SQProcessTracker.m
+//  Squeeler
 //
 //  Created by Brad Greenlee on 2/21/14.
 //  Copyright (c) 2014 HackArts. All rights reserved.
 //
 
-#import "HCProcessTracker.h"
+#import "SQProcessTracker.h"
 
-@implementation HCProcessTracker
+@implementation SQProcessTracker
 @synthesize delegate;
 
 - (id)init {
