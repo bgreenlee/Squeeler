@@ -8,6 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import "SQProcessTracker.h"
+#import "SQPreferencesWindowController.h"
 #import "SQAboutWindowController.h"
 
 @interface SQAppDelegate : NSObject <NSApplicationDelegate, HCProcessTrackerDelegate, NSUserNotificationCenterDelegate, NSUserNotificationCenterDelegate> {
@@ -18,8 +19,9 @@
     SQProcessTracker *processTracker;
 }
 
+- (IBAction)showPreferences:(id)sender;
 - (IBAction)showAbout:(id)sender;
 
-//@property (assign) IBOutlet NSWindow *window;
+@property (strong) SQPreferencesWindowController* preferencesWindowController;
 @property (strong) SQAboutWindowController* aboutWindowController;
 @end

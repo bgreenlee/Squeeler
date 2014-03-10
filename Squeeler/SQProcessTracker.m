@@ -7,6 +7,9 @@
 //
 
 #import "SQProcessTracker.h"
+#import <sys/proc_info.h>
+#import <libproc.h>
+
 
 @implementation SQProcessTracker
 @synthesize delegate;
@@ -77,6 +80,35 @@
     return processStatus;
 }
 
+/*
+ * getProcessName returns a the name of a process given a pid
+ * It seems like the only way to get the full process name is to
+ * extract it from the executable path.
+ */
+- (NSString *) processNameForPid:(pid_t) pid {
+    NSString *processName;
+    char pathBuffer[PROC_PIDPATHINFO_MAXSIZE];
+    bzero(pathBuffer, PROC_PIDPATHINFO_MAXSIZE);
+    proc_pidpath(pid, pathBuffer, sizeof(pathBuffer));
+    if (strlen(pathBuffer) > 0) {
+        // get last component of path
+        char *lastSlash = strrchr(pathBuffer, '/');
+        char *processNamePtr;
+        if (lastSlash != NULL) {
+            processNamePtr = lastSlash + 1;
+        } else {
+            processNamePtr = pathBuffer;
+        }
+        processName = [NSString stringWithCString:processNamePtr encoding:NSASCIIStringEncoding];
+        NSLog(@"proccessName: %@", processName);
+    } else {
+        NSLog(@"no pathBuffer!");
+        processName = [NSString stringWithFormat:@"Process #%d", pid];
+    }
+    
+    return processName;
+}
+
 - (void)updateProcessStatus:(NSDictionary *)lastProcessStatus {
     /*
      Iterate through the process dict:
@@ -87,28 +119,29 @@
        - else delete from process dict
      Iterate through lastProcessStatus and add any entries that aren't in processes
      */
-    [processes enumerateKeysAndObjectsUsingBlock:^(id pid, id counter, BOOL *stop) {
-        NSNumber *lastCPU = [lastProcessStatus objectForKey:pid];
+    [processes enumerateKeysAndObjectsUsingBlock:^(id pidStr, id counter, BOOL *stop) {
+        NSNumber *lastCPU = [lastProcessStatus objectForKey:pidStr];
         if (lastCPU == nil) {
-            [processes removeObjectForKey:pid]; // not in the latest process update, so remove it
+            [processes removeObjectForKey:pidStr]; // not in the latest process update, so remove it
         } else {
             NSInteger intCounter = [(NSNumber *)counter integerValue];
             if ([lastCPU integerValue] > CPU_THRESHOLD) {
                 if (intCounter >= COUNTER_THRESHOLD) {
                     // check that we haven't alerted on this process recently
-                    NSDate *lastAlert = [alertedProcesses objectForKey:pid];
+                    NSDate *lastAlert = [alertedProcesses objectForKey:pidStr];
                     if (lastAlert == nil || [lastAlert timeIntervalSinceNow] < -ALERT_RESET_TIMEOUT) {
-                        [alertedProcesses setObject:[NSDate date] forKey:pid];
-                        [delegate handleProcessAlertWithPid:[pid intValue]];  // send notification
+                        [alertedProcesses setObject:[NSDate date] forKey:pidStr];
+                        pid_t pid = [pidStr intValue];
+                        [delegate handleProcessAlertWithPid:pid processName:[self processNameForPid:pid]];  // send notification
                     }
-                    [processes setValue:[NSNumber numberWithInteger:0] forKey:pid]; // reset so we're not continually spamming
+                    [processes setValue:[NSNumber numberWithInteger:0] forKey:pidStr]; // reset so we're not continually spamming
                 } else {
-                    NSLog(@"Bumping counter for %@ up to %li", pid, intCounter + 1);
-                    [processes setValue:[NSNumber numberWithInteger:intCounter + 1] forKey:pid];
+                    NSLog(@"Bumping counter for %@ up to %li", pidStr, intCounter + 1);
+                    [processes setValue:[NSNumber numberWithInteger:intCounter + 1] forKey:pidStr];
                 }
             } else if (intCounter > 0) {
-                NSLog(@"Decrementing counter for %@ down to %li", pid, intCounter - 1);
-                [processes setValue:[NSNumber numberWithInteger:intCounter - 1] forKey:pid];
+                NSLog(@"Decrementing counter for %@ down to %li", pidStr, intCounter - 1);
+                [processes setValue:[NSNumber numberWithInteger:intCounter - 1] forKey:pidStr];
             }
         }
     }];

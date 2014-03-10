@@ -21,6 +21,8 @@
 		A219178518B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219178318B5980800C9256F /* InfoPlist.strings */; };
 		A219178718B5980800C9256F /* SqueelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219178618B5980800C9256F /* SqueelerTests.m */; };
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
+		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
+		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
 		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
 		A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3018CADF9F005E4926 /* statusbar-alternate.png */; };
 		A2773A3318CADF9F005E4926 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3118CADF9F005E4926 /* statusbar.png */; };
@@ -62,6 +64,9 @@
 		A219178618B5980800C9256F /* SqueelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqueelerTests.m; sourceTree = "<group>"; };
 		A219179018B7BB4200C9256F /* SQProcessTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQProcessTracker.h; sourceTree = "<group>"; };
 		A219179118B7BB4200C9256F /* SQProcessTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQProcessTracker.m; sourceTree = "<group>"; };
+		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
+		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
+		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
 		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
 		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
@@ -136,13 +141,15 @@
 				A219179018B7BB4200C9256F /* SQProcessTracker.h */,
 				A219179118B7BB4200C9256F /* SQProcessTracker.m */,
 				A219177118B5980800C9256F /* MainMenu.xib */,
+				A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */,
+				A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */,
+				A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */,
 				A211628D18BAA4C000C0FC58 /* SQAboutWindowController.h */,
 				A211628E18BAA4C000C0FC58 /* SQAboutWindowController.m */,
 				A211628618BA9A4900C0FC58 /* SQAboutWindow.xib */,
 				A219177418B5980800C9256F /* Images.xcassets */,
 				A219176318B5980800C9256F /* Supporting Files */,
 			);
-			name = Squeeler;
 			path = Squeeler;
 			sourceTree = "<group>";
 		};
@@ -168,7 +175,6 @@
 				A219178618B5980800C9256F /* SqueelerTests.m */,
 				A219178118B5980800C9256F /* Supporting Files */,
 			);
-			name = SqueelerTests;
 			path = SqueelerTests;
 			sourceTree = "<group>";
 		};
@@ -263,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A2773A2F18CAD801005E4926 /* icon.icns in Resources */,
+				A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */,
 				A2773A3318CADF9F005E4926 /* statusbar.png in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
@@ -308,6 +315,7 @@
 			files = (
 				A219176918B5980800C9256F /* main.m in Sources */,
 				A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */,
+				A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */,
 				A211629018BAA4C000C0FC58 /* SQAboutWindowController.m in Sources */,
 				A219177018B5980800C9256F /* SQAppDelegate.m in Sources */,
 			);

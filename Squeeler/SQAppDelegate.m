@@ -9,6 +9,7 @@
 #import "SQAppDelegate.h"
 
 @implementation SQAppDelegate
+@synthesize preferencesWindowController;
 @synthesize aboutWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
@@ -42,24 +43,27 @@
     [[NSWorkspace sharedWorkspace] launchApplication:@"Activity Monitor"];
 }
 
-- (void) handleProcessAlertWithPid:(pid_t)pid {
+- (void) handleProcessAlertWithPid:(pid_t)pid processName:(NSString *)name {
     NSLog(@"Process %i is a hog!", pid);
     // get application info
     NSRunningApplication *app = [NSRunningApplication runningApplicationWithProcessIdentifier:pid];
-    
     NSUserNotification *notification = [[NSUserNotification alloc] init];
     notification.userInfo = [NSDictionary dictionaryWithObject:[NSNumber numberWithInt:pid] forKey:@"pid"];
-    NSString *name = app.localizedName;
-    if (name == nil) {
-        name = [NSString stringWithFormat:@"Process #%i", pid];
-    }
     notification.title = [NSString stringWithFormat:@"CPU Hog: %@", name];
-    notification.informativeText = [NSString stringWithFormat:@"%@ is hogging CPU.", name];
+    notification.informativeText = [NSString stringWithFormat:@"%@ (%d) is hogging CPU.", name, pid];
     notification.contentImage = app.icon;
     notification.soundName = NSUserNotificationDefaultSoundName;
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
     
+}
+
+- (IBAction)showPreferences:(id)sender {
+    if (preferencesWindowController == nil) {
+        preferencesWindowController = [[SQPreferencesWindowController alloc] init];
+    }
+    [preferencesWindowController showWindow:self];
+    [[aboutWindowController window] setReleasedWhenClosed:NO];
 }
 
 - (IBAction)showAbout:(id)sender {

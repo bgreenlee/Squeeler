@@ -654,13 +654,20 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="8xH-DK-kBQ">
             <items>
-                <menuItem title="About" id="y2p-R6-bNe">
+                <menuItem title="Preferences..." id="sEs-la-otd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showPreferences:" target="494" id="e59-30-MWJ"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About Squeeler" id="y2p-R6-bNe">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showAbout:" target="494" id="x07-BR-KmJ"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Quit" id="M2P-tD-wOb">
+                <menuItem isSeparatorItem="YES" id="bcY-Ea-e7v"/>
+                <menuItem title="Quit Squeeler" id="M2P-tD-wOb">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="terminate:" target="-1" id="xe8-mr-SjJ"/>
