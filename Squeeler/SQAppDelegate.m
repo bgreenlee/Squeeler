@@ -63,7 +63,9 @@
         preferencesWindowController = [[SQPreferencesWindowController alloc] init];
     }
     [preferencesWindowController showWindow:self];
-    [[aboutWindowController window] setReleasedWhenClosed:NO];
+    [preferencesWindowController.window setReleasedWhenClosed:NO];
+    [preferencesWindowController.window center];
+    [preferencesWindowController.window setLevel: NSMainMenuWindowLevel];
 }
 
 - (IBAction)showAbout:(id)sender {
@@ -71,7 +73,9 @@
         aboutWindowController = [[SQAboutWindowController alloc] init];
     }
     [aboutWindowController showWindow:self];
-    [[aboutWindowController window] setReleasedWhenClosed:NO];
+    [aboutWindowController.window setReleasedWhenClosed:NO];
+    [aboutWindowController.window center];
+    [aboutWindowController.window setLevel: NSMainMenuWindowLevel];
 }
 
 @end
