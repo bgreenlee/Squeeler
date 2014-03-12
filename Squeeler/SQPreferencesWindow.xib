@@ -48,17 +48,26 @@
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="igH-FG-BZy">
                         <rect key="frame" x="161" y="158" width="271" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" state="on" alignment="left" maxValue="100" doubleValue="90" tickMarkPosition="below" numberOfTickMarks="21" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Y84-4o-aQs"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" minValue="5" maxValue="100" doubleValue="90" tickMarkPosition="below" numberOfTickMarks="20" allowsTickMarkValuesOnly="YES" sliderType="linear" id="Y84-4o-aQs"/>
+                        <connections>
+                            <action selector="cpuUsageSliderChanged:" target="-2" id="tDn-wf-QbZ"/>
+                        </connections>
                     </slider>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yED-e5-d3G">
                         <rect key="frame" x="161" y="110" width="271" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" state="on" alignment="left" maxValue="300" doubleValue="60" tickMarkPosition="below" numberOfTickMarks="21" allowsTickMarkValuesOnly="YES" sliderType="linear" id="B3k-lO-Iic"/>
+                        <sliderCell key="cell" continuous="YES" state="on" alignment="left" maxValue="15" doubleValue="5" tickMarkPosition="below" numberOfTickMarks="16" allowsTickMarkValuesOnly="YES" sliderType="linear" id="B3k-lO-Iic"/>
+                        <connections>
+                            <action selector="alertTimeSliderChanged:" target="-2" id="JSi-2e-2bB"/>
+                        </connections>
                     </slider>
                     <slider verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dAa-uW-tfu">
                         <rect key="frame" x="161" y="62" width="271" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <sliderCell key="cell" alignment="left" maxValue="60" doubleValue="6" tickMarkPosition="below" numberOfTickMarks="21" allowsTickMarkValuesOnly="YES" sliderType="linear" id="YC5-oB-kkO"/>
+                        <sliderCell key="cell" continuous="YES" alignment="left" maxValue="15" doubleValue="7" tickMarkPosition="below" numberOfTickMarks="16" allowsTickMarkValuesOnly="YES" sliderType="linear" id="YC5-oB-kkO"/>
+                        <connections>
+                            <action selector="alertResetSliderChanged:" target="-2" id="nhy-8P-ACD"/>
+                        </connections>
                     </slider>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Eu-gw-Z3p">
                         <rect key="frame" x="392" y="182" width="40" height="17"/>
@@ -70,16 +79,16 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="USd-tv-sqk">
-                        <rect key="frame" x="366" y="134" width="66" height="17"/>
+                        <rect key="frame" x="161" y="134" width="271" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="60 seconds" id="arU-gv-1i1">
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="1 minute" id="arU-gv-1i1">
                             <font key="font" metaFont="smallSystem"/>
                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="muk-eV-1ee">
-                        <rect key="frame" x="367" y="86" width="65" height="17"/>
+                        <rect key="frame" x="161" y="86" width="271" height="17"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="5 minutes" id="bEI-mm-N6Z">
                             <font key="font" metaFont="smallSystem"/>
@@ -99,7 +108,7 @@
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-iU-AUj">
                         <rect key="frame" x="161" y="29" width="162" height="18"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <buttonCell key="cell" type="check" title="Start Squeeler at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="1o3-ve-Atx">
+                        <buttonCell key="cell" type="check" title="Start Squeeler at login" bezelStyle="regularSquare" imagePosition="left" inset="2" id="1o3-ve-Atx">
                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
@@ -119,5 +128,6 @@
                 <outlet property="delegate" destination="-2" id="4"/>
             </connections>
         </window>
+        <userDefaultsController representsSharedInstance="YES" id="yIm-T9-Prq"/>
     </objects>
 </document>

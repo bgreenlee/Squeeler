@@ -23,6 +23,8 @@
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
 		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
 		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
+		A25EDB8618D009EA00332F8F /* SqueelerLaunchAtLogin.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */; };
+		A25EDB8C18D0138900332F8F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EDB8B18D0138900332F8F /* ServiceManagement.framework */; };
 		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
 		A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3018CADF9F005E4926 /* statusbar-alternate.png */; };
 		A2773A3318CADF9F005E4926 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3118CADF9F005E4926 /* statusbar.png */; };
@@ -37,7 +39,34 @@
 			remoteGlobalIDString = A219175818B5980800C9256F;
 			remoteInfo = Squeeler;
 		};
+		A25EDB8018D0081300332F8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A25EDB4418D0081200332F8F;
+			remoteInfo = SqueelerLaunchAtLogin;
+		};
+		A25EDB8218D0081300332F8F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A25EDB6518D0081200332F8F;
+			remoteInfo = SqueelerLaunchAtLoginTests;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A25EDB8418D0097700332F8F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				A25EDB8618D009EA00332F8F /* SqueelerLaunchAtLogin.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A211628618BA9A4900C0FC58 /* SQAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQAboutWindow.xib; sourceTree = "<group>"; };
@@ -67,6 +96,9 @@
 		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
 		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
 		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
+		A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SqueelerLaunchAtLogin.xcodeproj; path = SqueelerLaunchAtLogin/SqueelerLaunchAtLogin.xcodeproj; sourceTree = "<group>"; };
+		A25EDB8718D00A3300332F8F /* Squeeler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Squeeler.entitlements; sourceTree = "<group>"; };
+		A25EDB8B18D0138900332F8F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
 		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
@@ -78,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A25EDB8C18D0138900332F8F /* ServiceManagement.framework in Frameworks */,
 				A219175D18B5980800C9256F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +130,7 @@
 		A219175018B5980800C9256F = {
 			isa = PBXGroup;
 			children = (
+				A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */,
 				A219176218B5980800C9256F /* Squeeler */,
 				A219178018B5980800C9256F /* SqueelerTests */,
 				A219175B18B5980800C9256F /* Frameworks */,
@@ -116,6 +150,7 @@
 		A219175B18B5980800C9256F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A25EDB8B18D0138900332F8F /* ServiceManagement.framework */,
 				A219175C18B5980800C9256F /* Cocoa.framework */,
 				A219177B18B5980800C9256F /* XCTest.framework */,
 				A219175E18B5980800C9256F /* Other Frameworks */,
@@ -136,6 +171,7 @@
 		A219176218B5980800C9256F /* Squeeler */ = {
 			isa = PBXGroup;
 			children = (
+				A25EDB8718D00A3300332F8F /* Squeeler.entitlements */,
 				A219176E18B5980800C9256F /* SQAppDelegate.h */,
 				A219176F18B5980800C9256F /* SQAppDelegate.m */,
 				A219179018B7BB4200C9256F /* SQProcessTracker.h */,
@@ -187,6 +223,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A25EDB7C18D0081200332F8F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */,
+				A25EDB8318D0081300332F8F /* SqueelerLaunchAtLoginTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,6 +243,7 @@
 				A219175618B5980800C9256F /* Frameworks */,
 				A219175718B5980800C9256F /* Resources */,
 				A281175718CB7561000CE3C8 /* Run Script */,
+				A25EDB8418D0097700332F8F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -238,6 +284,11 @@
 				TargetAttributes = {
 					A219175818B5980800C9256F = {
 						DevelopmentTeam = TS246368KR;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					A219177918B5980800C9256F = {
 						TestTargetID = A219175818B5980800C9256F;
@@ -255,6 +306,12 @@
 			mainGroup = A219175018B5980800C9256F;
 			productRefGroup = A219175A18B5980800C9256F /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A25EDB7C18D0081200332F8F /* Products */;
+					ProjectRef = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A219175818B5980800C9256F /* Squeeler */,
@@ -262,6 +319,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SqueelerLaunchAtLogin.app;
+			remoteRef = A25EDB8018D0081300332F8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A25EDB8318D0081300332F8F /* SqueelerLaunchAtLoginTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = SqueelerLaunchAtLoginTests.xctest;
+			remoteRef = A25EDB8218D0081300332F8F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A219175718B5980800C9256F /* Resources */ = {
@@ -447,12 +521,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squeeler/Squeeler-Prefix.pch";
 				INFOPLIST_FILE = "Squeeler/Squeeler-Info.plist";
 				PRODUCT_NAME = Squeeler;
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -461,12 +536,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squeeler/Squeeler-Prefix.pch";
 				INFOPLIST_FILE = "Squeeler/Squeeler-Info.plist";
 				PRODUCT_NAME = Squeeler;
+				STRIP_INSTALLED_PRODUCT = NO;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
