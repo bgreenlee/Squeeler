@@ -7,7 +7,7 @@
 //
 
 #import "SQPreferencesWindowController.h"
-#import <ServiceManagement/ServiceManagement.h>
+#import "LaunchAtLoginController.h"
 
 @interface SQPreferencesWindowController ()
 
@@ -17,7 +17,7 @@
 @synthesize cpuUsageSlider, cpuUsageText;
 @synthesize alertTimeSlider, alertTimeText;
 @synthesize alertResetSlider, alertResetText;
-@synthesize startAtLogin;
+@synthesize launchAtLoginCheckbox;
 
 - (id)init {
     self = [super initWithWindowNibName:@"SQPreferencesWindow"];
@@ -74,7 +74,10 @@
     [self.alertResetSlider setIntegerValue:i];
     [self updateAlertResetText:alertReset];
 
-    // TODO: handle launch at login
+    // set launch at login
+    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+    BOOL launchAtLoginEnabled = [launchController launchAtLogin];
+    [launchAtLoginCheckbox setState:launchAtLoginEnabled ? NSOnState : NSOffState];
 }
 - (void)saveSettings {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -86,29 +89,10 @@
     NSInteger alertReset = [[alertResetTickMap objectAtIndex:alertResetTick] integerValue];
     [defaults setInteger:alertReset forKey:@"alertReset"];
 
-    // Turn on launch at login
-    BOOL startAtLoginEnabled = [startAtLogin state] == NSOnState;
-    if (startAtLoginEnabled) {
-        NSLog(@"enabling start at login");
-        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.hackarts.SqueelerLaunchAtLogin", YES)) {
-                NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
-                                                 defaultButton:@"OK"
-                                               alternateButton:nil
-                                                   otherButton:nil
-                                     informativeTextWithFormat:@"Couldn't add Helper App to launch at login item list."];
-                [alert runModal];
-        }
-    } else {
-        // Turn off launch at login
-        if (!SMLoginItemSetEnabled ((__bridge CFStringRef)@"com.hackarts.SqueelerLaunchAtLogin", NO)) {
-            NSAlert *alert = [NSAlert alertWithMessageText:@"An error ocurred"
-                                             defaultButton:@"OK"
-                                           alternateButton:nil
-                                               otherButton:nil
-                                 informativeTextWithFormat:@"Couldn't remove Helper App from launch at login item list."];
-            [alert runModal];
-        }
-    }
+    // save launch at login preference
+    LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
+    BOOL launchOnLoginEnabled = [launchAtLoginCheckbox state] == NSOnState;
+	[launchController setLaunchAtLogin:launchOnLoginEnabled];
 }
 
 - (IBAction)cpuUsageSliderChanged:(id)sender {

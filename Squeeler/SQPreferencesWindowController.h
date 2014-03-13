@@ -23,7 +23,7 @@
 @property(nonatomic) IBOutlet NSTextField *alertTimeText;
 @property(nonatomic) IBOutlet NSSlider *alertResetSlider;
 @property(nonatomic) IBOutlet NSTextField *alertResetText;
-@property(nonatomic) IBOutlet NSButton *startAtLogin;
+@property(nonatomic) IBOutlet NSButton *launchAtLoginCheckbox;
 
 - (IBAction)cpuUsageSliderChanged:(id)sender;
 - (IBAction)alertTimeSliderChanged:(id)sender;

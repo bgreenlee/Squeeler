@@ -23,12 +23,14 @@
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
 		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
 		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
-		A25EDB8618D009EA00332F8F /* SqueelerLaunchAtLogin.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */; };
-		A25EDB8C18D0138900332F8F /* ServiceManagement.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25EDB8B18D0138900332F8F /* ServiceManagement.framework */; };
 		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
 		A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3018CADF9F005E4926 /* statusbar-alternate.png */; };
 		A2773A3318CADF9F005E4926 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3118CADF9F005E4926 /* statusbar.png */; };
 		A2773A3518CAE382005E4926 /* SqueelerAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3418CAE382005E4926 /* SqueelerAbout.png */; };
+		A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29E850A18D15B240095976F /* LaunchAtLoginController.m */; };
+		A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */; };
+		A29E851018D15B240095976F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A29E850C18D15B240095976F /* LICENSE */; };
+		A29E851118D15B240095976F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A29E850D18D15B240095976F /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,20 +41,6 @@
 			remoteGlobalIDString = A219175818B5980800C9256F;
 			remoteInfo = Squeeler;
 		};
-		A25EDB8018D0081300332F8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A25EDB4418D0081200332F8F;
-			remoteInfo = SqueelerLaunchAtLogin;
-		};
-		A25EDB8218D0081300332F8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A25EDB6518D0081200332F8F;
-			remoteInfo = SqueelerLaunchAtLoginTests;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -62,7 +50,6 @@
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				A25EDB8618D009EA00332F8F /* SqueelerLaunchAtLogin.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,13 +83,16 @@
 		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
 		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
 		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
-		A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SqueelerLaunchAtLogin.xcodeproj; path = SqueelerLaunchAtLogin/SqueelerLaunchAtLogin.xcodeproj; sourceTree = "<group>"; };
 		A25EDB8718D00A3300332F8F /* Squeeler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Squeeler.entitlements; sourceTree = "<group>"; };
-		A25EDB8B18D0138900332F8F /* ServiceManagement.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ServiceManagement.framework; path = System/Library/Frameworks/ServiceManagement.framework; sourceTree = SDKROOT; };
 		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
 		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
 		A2773A3418CAE382005E4926 /* SqueelerAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SqueelerAbout.png; sourceTree = "<group>"; };
+		A29E850918D15B240095976F /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
+		A29E850A18D15B240095976F /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
+		A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaunchAtLoginController.podspec; sourceTree = "<group>"; };
+		A29E850C18D15B240095976F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A29E850D18D15B240095976F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A25EDB8C18D0138900332F8F /* ServiceManagement.framework in Frameworks */,
 				A219175D18B5980800C9256F /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -130,9 +119,9 @@
 		A219175018B5980800C9256F = {
 			isa = PBXGroup;
 			children = (
-				A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */,
 				A219176218B5980800C9256F /* Squeeler */,
 				A219178018B5980800C9256F /* SqueelerTests */,
+				A29E850718D15B050095976F /* Other Sources */,
 				A219175B18B5980800C9256F /* Frameworks */,
 				A219175A18B5980800C9256F /* Products */,
 			);
@@ -150,7 +139,6 @@
 		A219175B18B5980800C9256F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				A25EDB8B18D0138900332F8F /* ServiceManagement.framework */,
 				A219175C18B5980800C9256F /* Cocoa.framework */,
 				A219177B18B5980800C9256F /* XCTest.framework */,
 				A219175E18B5980800C9256F /* Other Frameworks */,
@@ -223,13 +211,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A25EDB7C18D0081200332F8F /* Products */ = {
+		A29E850718D15B050095976F /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
-				A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */,
-				A25EDB8318D0081300332F8F /* SqueelerLaunchAtLoginTests.xctest */,
+				A29E850818D15B240095976F /* LaunchAtLoginController */,
 			);
-			name = Products;
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		A29E850818D15B240095976F /* LaunchAtLoginController */ = {
+			isa = PBXGroup;
+			children = (
+				A29E850918D15B240095976F /* LaunchAtLoginController.h */,
+				A29E850A18D15B240095976F /* LaunchAtLoginController.m */,
+				A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */,
+				A29E850C18D15B240095976F /* LICENSE */,
+				A29E850D18D15B240095976F /* README.md */,
+			);
+			path = LaunchAtLoginController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,12 +305,6 @@
 			mainGroup = A219175018B5980800C9256F;
 			productRefGroup = A219175A18B5980800C9256F /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = A25EDB7C18D0081200332F8F /* Products */;
-					ProjectRef = A25EDB7B18D0081200332F8F /* SqueelerLaunchAtLogin.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				A219175818B5980800C9256F /* Squeeler */,
@@ -320,33 +313,19 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		A25EDB8118D0081300332F8F /* SqueelerLaunchAtLogin.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			path = SqueelerLaunchAtLogin.app;
-			remoteRef = A25EDB8018D0081300332F8F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		A25EDB8318D0081300332F8F /* SqueelerLaunchAtLoginTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = SqueelerLaunchAtLoginTests.xctest;
-			remoteRef = A25EDB8218D0081300332F8F /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		A219175718B5980800C9256F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A2773A2F18CAD801005E4926 /* icon.icns in Resources */,
+				A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */,
 				A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */,
 				A2773A3318CADF9F005E4926 /* statusbar.png in Resources */,
+				A29E851118D15B240095976F /* README.md in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
+				A29E851018D15B240095976F /* LICENSE in Resources */,
 				A211628718BA9A4900C0FC58 /* SQAboutWindow.xib in Resources */,
 				A2773A3518CAE382005E4926 /* SqueelerAbout.png in Resources */,
 				A219176D18B5980800C9256F /* Credits.rtf in Resources */,
@@ -390,6 +369,7 @@
 				A219176918B5980800C9256F /* main.m in Sources */,
 				A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */,
 				A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */,
+				A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */,
 				A211629018BAA4C000C0FC58 /* SQAboutWindowController.m in Sources */,
 				A219177018B5980800C9256F /* SQAppDelegate.m in Sources */,
 			);
