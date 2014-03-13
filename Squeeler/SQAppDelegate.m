@@ -12,8 +12,8 @@
 @synthesize preferencesWindowController;
 @synthesize aboutWindowController;
 
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
-{
+- (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [NSApp setDelegate:self];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
     processTracker = [[SQProcessTracker alloc] initWithDelegate:self];
     [processTracker start];
@@ -35,7 +35,8 @@
     return YES;
 }
 
-- (void) userNotificationCenter:(NSUserNotificationCenter *)center didActivateNotification:(NSUserNotification *)notification
+- (void)userNotificationCenter:(NSUserNotificationCenter *)center
+       didActivateNotification:(NSUserNotification *)notification
 {
     [center removeDeliveredNotification:notification];
     pid_t pid = [[[notification userInfo] objectForKey:@"pid"] intValue];
@@ -58,7 +59,15 @@
     
 }
 
-- (IBAction)showPreferences:(id)sender {
+- (void) updateSettingsWithCpuUsage:(NSInteger)cpuUsage
+                          alertTime:(NSInteger)alertTime
+                         alertReset:(NSInteger)alertReset {
+    processTracker.cpuUsageThreshold = cpuUsage;
+    processTracker.alertTime = alertTime;
+    processTracker.alertReset = alertReset;
+}
+
+- (IBAction) showPreferences:(id)sender {
     if (preferencesWindowController == nil) {
         preferencesWindowController = [[SQPreferencesWindowController alloc] init];
     }
@@ -68,7 +77,7 @@
     [preferencesWindowController.window setLevel: NSMainMenuWindowLevel];
 }
 
-- (IBAction)showAbout:(id)sender {
+- (IBAction) showAbout:(id)sender {
     if (aboutWindowController == nil) {
         aboutWindowController = [[SQAboutWindowController alloc] init];
     }

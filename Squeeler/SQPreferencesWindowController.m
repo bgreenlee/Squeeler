@@ -8,6 +8,7 @@
 
 #import "SQPreferencesWindowController.h"
 #import "LaunchAtLoginController.h"
+#import "SQAppDelegate.h"
 
 @interface SQPreferencesWindowController ()
 
@@ -81,7 +82,8 @@
 }
 - (void)saveSettings {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setInteger:[cpuUsageSlider integerValue] forKey:@"cpuUsage"];
+    NSInteger cpuUsage = [cpuUsageSlider integerValue];
+    [defaults setInteger:cpuUsage forKey:@"cpuUsage"];
     NSInteger alertTimeTick = [alertTimeSlider integerValue];
     NSInteger alertTime = [[alertTimeTickMap objectAtIndex:alertTimeTick] integerValue];
     [defaults setInteger:alertTime forKey:@"alertTime"];
@@ -93,6 +95,8 @@
     LaunchAtLoginController *launchController = [[LaunchAtLoginController alloc] init];
     BOOL launchOnLoginEnabled = [launchAtLoginCheckbox state] == NSOnState;
 	[launchController setLaunchAtLogin:launchOnLoginEnabled];
+    
+    [[NSApp delegate] updateSettingsWithCpuUsage:cpuUsage alertTime:alertTime alertReset:alertReset];
 }
 
 - (IBAction)cpuUsageSliderChanged:(id)sender {

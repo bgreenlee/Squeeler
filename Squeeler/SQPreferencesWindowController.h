@@ -7,10 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-
-#define DEFAULT_CPU_USAGE 90  // percent CPU usage before we start counting
-#define DEFAULT_ALERT_TIME 60  // number of seconds before we alert
-#define DEFAULT_ALERT_RESET 300  // number of seconds before we will alert again on a particular process
+#import "SQProcessTracker.h"
 
 @interface SQPreferencesWindowController : NSWindowController <NSWindowDelegate> {
     NSArray *alertTimeTickMap;

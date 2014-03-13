@@ -19,8 +19,11 @@
     SQProcessTracker *processTracker;
 }
 
-- (IBAction)showPreferences:(id)sender;
-- (IBAction)showAbout:(id)sender;
+- (void) updateSettingsWithCpuUsage:(NSInteger)cpuUsage
+                          alertTime:(NSInteger)alertTime
+                         alertReset:(NSInteger)alertReset;
+- (IBAction) showPreferences:(id)sender;
+- (IBAction) showAbout:(id)sender;
 
 @property (strong) SQPreferencesWindowController* preferencesWindowController;
 @property (strong) SQAboutWindowController* aboutWindowController;

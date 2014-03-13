@@ -18,6 +18,20 @@
     if ((self = [super init])) {
         processes = [[NSMutableDictionary alloc] init];
         alertedProcesses = [[NSMutableDictionary alloc] init];
+        // load settings
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        self.cpuUsageThreshold = [defaults integerForKey:@"cpuUsage"];
+        if (self.cpuUsageThreshold == 0) {
+            self.cpuUsageThreshold = DEFAULT_CPU_USAGE;
+        }
+        self.alertTime = [defaults integerForKey:@"alertTime"];
+        if (self.alertTime == 0) {
+            self.alertTime = DEFAULT_ALERT_TIME;
+        }
+        self.alertReset = [defaults integerForKey:@"alertReset"];
+        if (self.alertReset == 0) {
+            self.alertReset = DEFAULT_ALERT_RESET;
+        }
     }
     return self;
 }
@@ -125,11 +139,11 @@
             [processes removeObjectForKey:pidStr]; // not in the latest process update, so remove it
         } else {
             NSInteger intCounter = [(NSNumber *)counter integerValue];
-            if ([lastCPU integerValue] > CPU_THRESHOLD) {
-                if (intCounter >= COUNTER_THRESHOLD) {
+            if ([lastCPU integerValue] > self.cpuUsageThreshold) {
+                if (intCounter >= self.alertTime / CHECK_INTERVAL) {
                     // check that we haven't alerted on this process recently
                     NSDate *lastAlert = [alertedProcesses objectForKey:pidStr];
-                    if (lastAlert == nil || [lastAlert timeIntervalSinceNow] < -ALERT_RESET_TIMEOUT) {
+                    if (lastAlert == nil || [lastAlert timeIntervalSinceNow] < -self.alertReset) {
                         [alertedProcesses setObject:[NSDate date] forKey:pidStr];
                         pid_t pid = [pidStr intValue];
                         [delegate handleProcessAlertWithPid:pid processName:[self processNameForPid:pid]];  // send notification
