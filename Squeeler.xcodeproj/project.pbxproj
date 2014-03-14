@@ -21,6 +21,8 @@
 		A219178518B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219178318B5980800C9256F /* InfoPlist.strings */; };
 		A219178718B5980800C9256F /* SqueelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219178618B5980800C9256F /* SqueelerTests.m */; };
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
+		A252A50318D2AD600026398C /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A252A50218D2AD600026398C /* Sparkle.framework */; };
+		A252A50418D2AD6B0026398C /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A252A50218D2AD600026398C /* Sparkle.framework */; };
 		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
 		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
 		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
@@ -47,9 +49,10 @@
 		A25EDB8418D0097700332F8F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = Contents/Library/LoginItems;
-			dstSubfolderSpec = 1;
+			dstPath = "";
+			dstSubfolderSpec = 10;
 			files = (
+				A252A50418D2AD6B0026398C /* Sparkle.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,10 +83,10 @@
 		A219178618B5980800C9256F /* SqueelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqueelerTests.m; sourceTree = "<group>"; };
 		A219179018B7BB4200C9256F /* SQProcessTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQProcessTracker.h; sourceTree = "<group>"; };
 		A219179118B7BB4200C9256F /* SQProcessTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQProcessTracker.m; sourceTree = "<group>"; };
+		A252A50218D2AD600026398C /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
 		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
 		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
-		A25EDB8718D00A3300332F8F /* Squeeler.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Squeeler.entitlements; sourceTree = "<group>"; };
 		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
 		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
 		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A219175D18B5980800C9256F /* Cocoa.framework in Frameworks */,
+				A252A50318D2AD600026398C /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +143,7 @@
 		A219175B18B5980800C9256F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A252A50218D2AD600026398C /* Sparkle.framework */,
 				A219175C18B5980800C9256F /* Cocoa.framework */,
 				A219177B18B5980800C9256F /* XCTest.framework */,
 				A219175E18B5980800C9256F /* Other Frameworks */,
@@ -159,7 +164,6 @@
 		A219176218B5980800C9256F /* Squeeler */ = {
 			isa = PBXGroup;
 			children = (
-				A25EDB8718D00A3300332F8F /* Squeeler.entitlements */,
 				A219176E18B5980800C9256F /* SQAppDelegate.h */,
 				A219176F18B5980800C9256F /* SQAppDelegate.m */,
 				A219179018B7BB4200C9256F /* SQProcessTracker.h */,
@@ -501,8 +505,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brad Greenlee (3NP42LL5VS)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squeeler/Squeeler-Prefix.pch";
 				INFOPLIST_FILE = "Squeeler/Squeeler-Info.plist";
@@ -516,9 +524,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer: Brad Greenlee (3NP42LL5VS)";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Squeeler/Squeeler-Prefix.pch";
 				INFOPLIST_FILE = "Squeeler/Squeeler-Info.plist";
