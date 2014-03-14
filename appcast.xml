@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle"  xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>Squeeler.app Changelog</title>
+        <link>http://bgreenlee.github.io/Squeeler/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.0</title>
+            <description><![CDATA[
+<ul>
+  <li>Initial release.</li>
+</ul>
+    ]]>
+    </description>
+            <pubDate>Thu, 13 March 2014 21:09:41 -0700</pubDate>
+            <enclosure url="" sparkle:version="1.0.0" length="0" type="application/octet-stream" />
+        </item>
+    </channel>
+</rss>
