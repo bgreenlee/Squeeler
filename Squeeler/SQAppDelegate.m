@@ -15,6 +15,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [NSApp setDelegate:self];
     [[NSUserNotificationCenter defaultUserNotificationCenter] setDelegate:self];
+    [statusMenu setDelegate:self];
     processTracker = [[SQProcessTracker alloc] initWithDelegate:self];
     [processTracker start];
 }
@@ -36,6 +37,7 @@
        didActivateNotification:(NSUserNotification *)notification
 {
     [center removeDeliveredNotification:notification];
+    [statusItem setImage:[NSImage imageNamed:@"statusbar"]];
     pid_t pid = [[[notification userInfo] objectForKey:@"pid"] intValue];
     NSLog(@"Clicked on notification with pid %i", pid);
     [[NSWorkspace sharedWorkspace] launchApplication:@"Activity Monitor"];
@@ -53,7 +55,8 @@
     notification.soundName = NSUserNotificationDefaultSoundName;
     
     [[NSUserNotificationCenter defaultUserNotificationCenter] deliverNotification:notification];
-    
+
+    [statusItem setImage:[NSImage imageNamed:@"statusbar-alerted"]];
 }
 
 - (void) updateSettingsWithCpuUsage:(NSInteger)cpuUsage
@@ -62,6 +65,11 @@
     processTracker.cpuUsageThreshold = cpuUsage;
     processTracker.alertTime = alertTime;
     processTracker.alertReset = alertReset;
+}
+
+- (void) menuWillOpen:(NSMenu *)menu {
+    // clear alert status
+    [statusItem setImage:[NSImage imageNamed:@"statusbar"]];
 }
 
 - (IBAction) showPreferences:(id)sender {
