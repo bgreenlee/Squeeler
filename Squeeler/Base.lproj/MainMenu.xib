@@ -655,6 +655,17 @@
         <customObject id="420" customClass="NSFontManager"/>
         <menu id="8xH-DK-kBQ">
             <items>
+                <menuItem title="Recent Hogs" tag="1" id="nfA-cb-pLT">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Recent Hogs" autoenablesItems="NO" id="qAe-87-hMp">
+                        <items>
+                            <menuItem title="None" enabled="NO" id="xfF-FX-ukm">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="JKa-cC-Gjp"/>
                 <menuItem title="Preferences..." id="sEs-la-otd">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>

@@ -114,9 +114,9 @@
             processNamePtr = pathBuffer;
         }
         processName = [NSString stringWithCString:processNamePtr encoding:NSASCIIStringEncoding];
-        NSLog(@"proccessName: %@", processName);
+//        NSLog(@"proccessName: %@", processName);
     } else {
-        NSLog(@"no pathBuffer!");
+//        NSLog(@"no pathBuffer!");
         processName = [NSString stringWithFormat:@"Process #%d", pid];
     }
     
@@ -150,11 +150,11 @@
                     }
                     [processes setValue:[NSNumber numberWithInteger:0] forKey:pidStr]; // reset so we're not continually spamming
                 } else {
-                    NSLog(@"Bumping counter for %@ up to %li", pidStr, intCounter + 1);
+//                    NSLog(@"Bumping counter for %@ up to %li", pidStr, intCounter + 1);
                     [processes setValue:[NSNumber numberWithInteger:intCounter + 1] forKey:pidStr];
                 }
             } else if (intCounter > 0) {
-                NSLog(@"Decrementing counter for %@ down to %li", pidStr, intCounter - 1);
+//                NSLog(@"Decrementing counter for %@ down to %li", pidStr, intCounter - 1);
                 [processes setValue:[NSNumber numberWithInteger:intCounter - 1] forKey:pidStr];
             }
         }
