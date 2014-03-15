@@ -6,27 +6,27 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 1.1</title>
+            <title>Version 1.2</title>
             <description><![CDATA[
+<h3>Version 1.2</h3>
+<ul>
+  <li>Added Recent Hogs menu</li>
+</ul>
+
+<h3>Version 1.1</h3>
 <ul>
   <li>Status bar icon turns yellow when there's been an alert.</li>
   <li>Proper retina images.</li>
 </ul>
-    ]]>
-            </description>
-            <pubDate>Sat, 15 March 2014 09:10:08 -0700</pubDate>
-            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="18" sparkle:shortVersionString="1.1" length="1840667" type="application/octet-stream" />
-        </item>
-        <item>
-            <title>Version 1.0</title>
-            <description><![CDATA[
+
+<h3>Version 1.0</h3>
 <ul>
   <li>Initial release.</li>
 </ul>
     ]]>
             </description>
-            <pubDate>Thu, 13 March 2014 21:09:41 -0700</pubDate>
-            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="14" sparkle:shortVersionString="1.0" length="1803237" type="application/octet-stream" />
+            <pubDate>Sat, 15 March 2014 16:15:12 -0700</pubDate>
+            <enclosure url="https://github.com/bgreenlee/Squeeler/blob/master/download/Squeeler.app.zip?raw=true" sparkle:version="20" sparkle:shortVersionString="1.2" length="1841313" type="application/octet-stream" />
         </item>
     </channel>
 </rss>
