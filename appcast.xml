@@ -6,6 +6,18 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
+            <title>Version 1.1</title>
+            <description><![CDATA[
+<ul>
+  <li>Status bar icon turns yellow when there's been an alert.</li>
+  <li>Proper retina images.</li>
+</ul>
+    ]]>
+    </description>
+            <pubDate>Sat, 15 March 2014 09:10:08 -0700</pubDate>
+            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="1.1.0" length="1840664" type="application/octet-stream" />
+        </item>
+        <item>
             <title>Version 1.0</title>
             <description><![CDATA[
 <ul>
