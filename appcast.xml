@@ -15,7 +15,18 @@
     ]]>
             </description>
             <pubDate>Sat, 15 March 2014 09:10:08 -0700</pubDate>
-            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="1.1" length="1840664" type="application/octet-stream" />
+            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="18" sparkle:shortVersionString="1.1" length="1840667" type="application/octet-stream" />
         </item>
-g    </channel>
+        <item>
+            <title>Version 1.0</title>
+            <description><![CDATA[
+<ul>
+  <li>Initial release.</li>
+</ul>
+    ]]>
+            </description>
+            <pubDate>Thu, 13 March 2014 21:09:41 -0700</pubDate>
+            <enclosure url="https://dl.dropboxusercontent.com/u/422683/Squeeler/Squeeler.app.zip" sparkle:version="14" sparkle:shortVersionString="1.0" length="1803237" type="application/octet-stream" />
+        </item>
+    </channel>
 </rss>
