@@ -21,11 +21,8 @@
 
 - (void)awakeFromNib {
     statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
-    NSBundle *bundle = [NSBundle mainBundle];
-    statusImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"statusbar" ofType:@"png"]];
-    [statusItem setImage:statusImage];
-    statusHighlightImage = [[NSImage alloc] initWithContentsOfFile:[bundle pathForResource:@"statusbar-alternate" ofType:@"png"]];
-    [statusItem setAlternateImage:statusHighlightImage];
+    [statusItem setImage:[NSImage imageNamed:@"statusbar"]];
+    [statusItem setAlternateImage:[NSImage imageNamed:@"statusbar-alternate"]];
     [statusItem setMenu:statusMenu];
     [statusItem setToolTip:@"Squeeler"];
     [statusItem setHighlightMode:YES];

@@ -23,10 +23,6 @@
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
 		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
 		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
-		A2773A2F18CAD801005E4926 /* icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = A2773A2E18CAD6FC005E4926 /* icon.icns */; };
-		A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3018CADF9F005E4926 /* statusbar-alternate.png */; };
-		A2773A3318CADF9F005E4926 /* statusbar.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3118CADF9F005E4926 /* statusbar.png */; };
-		A2773A3518CAE382005E4926 /* SqueelerAbout.png in Resources */ = {isa = PBXBuildFile; fileRef = A2773A3418CAE382005E4926 /* SqueelerAbout.png */; };
 		A2844BF218D40847000E364A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A2844BF318D40855000E364A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29E850A18D15B240095976F /* LaunchAtLoginController.m */; };
@@ -86,10 +82,6 @@
 		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
 		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
 		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
-		A2773A2E18CAD6FC005E4926 /* icon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icon.icns; sourceTree = "<group>"; };
-		A2773A3018CADF9F005E4926 /* statusbar-alternate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "statusbar-alternate.png"; sourceTree = "<group>"; };
-		A2773A3118CADF9F005E4926 /* statusbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = statusbar.png; sourceTree = "<group>"; };
-		A2773A3418CAE382005E4926 /* SqueelerAbout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SqueelerAbout.png; sourceTree = "<group>"; };
 		A2844BF118D40847000E364A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A29E850918D15B240095976F /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		A29E850A18D15B240095976F /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
@@ -184,10 +176,6 @@
 		A219176318B5980800C9256F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				A2773A3418CAE382005E4926 /* SqueelerAbout.png */,
-				A2773A3018CADF9F005E4926 /* statusbar-alternate.png */,
-				A2773A3118CADF9F005E4926 /* statusbar.png */,
-				A2773A2E18CAD6FC005E4926 /* icon.icns */,
 				A219176418B5980800C9256F /* Squeeler-Info.plist */,
 				A219176518B5980800C9256F /* InfoPlist.strings */,
 				A219176818B5980800C9256F /* main.m */,
@@ -322,19 +310,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A2773A2F18CAD801005E4926 /* icon.icns in Resources */,
 				A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */,
 				A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */,
-				A2773A3318CADF9F005E4926 /* statusbar.png in Resources */,
 				A29E851118D15B240095976F /* README.md in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
 				A29E851018D15B240095976F /* LICENSE in Resources */,
 				A211628718BA9A4900C0FC58 /* SQAboutWindow.xib in Resources */,
-				A2773A3518CAE382005E4926 /* SqueelerAbout.png in Resources */,
 				A219176D18B5980800C9256F /* Credits.rtf in Resources */,
 				A219177318B5980800C9256F /* MainMenu.xib in Resources */,
-				A2773A3218CADF9F005E4926 /* statusbar-alternate.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

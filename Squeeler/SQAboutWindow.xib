@@ -22,9 +22,9 @@
                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                 <subviews>
                     <imageView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pt4-aL-iLq">
-                        <rect key="frame" x="20" y="102" width="96" height="96"/>
+                        <rect key="frame" x="20" y="98" width="96" height="96"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="SqueelerAbout" id="t1V-Oa-vcm"/>
+                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="squeeler-about" id="t1V-Oa-vcm"/>
                     </imageView>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aok-2h-v3a">
                         <rect key="frame" x="135" y="179" width="92" height="19"/>
@@ -103,6 +103,6 @@
         </window>
     </objects>
     <resources>
-        <image name="SqueelerAbout" width="96" height="96"/>
+        <image name="squeeler-about" width="96" height="96"/>
     </resources>
 </document>
