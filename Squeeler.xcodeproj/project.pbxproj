@@ -29,6 +29,8 @@
 		A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */; };
 		A29E851018D15B240095976F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A29E850C18D15B240095976F /* LICENSE */; };
 		A29E851118D15B240095976F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A29E850D18D15B240095976F /* README.md */; };
+		A2FDEB9918D5193100387C11 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */; };
+		A2FDEB9C18D5233000387C11 /* HyperlinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9B18D5233000387C11 /* HyperlinkTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +90,10 @@
 		A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaunchAtLoginController.podspec; sourceTree = "<group>"; };
 		A29E850C18D15B240095976F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A29E850D18D15B240095976F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A2FDEB9718D5193100387C11 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
+		A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
+		A2FDEB9A18D5233000387C11 /* HyperlinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkTextField.h; sourceTree = "<group>"; };
+		A2FDEB9B18D5233000387C11 /* HyperlinkTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HyperlinkTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,6 +212,7 @@
 		A29E850718D15B050095976F /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A2FDEB9618D5193100387C11 /* NSAttributedString+Hyperlink */,
 				A29E850818D15B240095976F /* LaunchAtLoginController */,
 			);
 			name = "Other Sources";
@@ -221,6 +228,17 @@
 				A29E850D18D15B240095976F /* README.md */,
 			);
 			path = LaunchAtLoginController;
+			sourceTree = "<group>";
+		};
+		A2FDEB9618D5193100387C11 /* NSAttributedString+Hyperlink */ = {
+			isa = PBXGroup;
+			children = (
+				A2FDEB9A18D5233000387C11 /* HyperlinkTextField.h */,
+				A2FDEB9B18D5233000387C11 /* HyperlinkTextField.m */,
+				A2FDEB9718D5193100387C11 /* NSAttributedString+Hyperlink.h */,
+				A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */,
+			);
+			path = "NSAttributedString+Hyperlink";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,6 +378,8 @@
 				A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */,
 				A211629018BAA4C000C0FC58 /* SQAboutWindowController.m in Sources */,
 				A219177018B5980800C9256F /* SQAppDelegate.m in Sources */,
+				A2FDEB9C18D5233000387C11 /* HyperlinkTextField.m in Sources */,
+				A2FDEB9918D5193100387C11 /* NSAttributedString+Hyperlink.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

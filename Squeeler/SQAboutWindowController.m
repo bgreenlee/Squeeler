@@ -14,21 +14,31 @@
 
 @implementation SQAboutWindowController
 @synthesize version;
+@synthesize homepageLink;
 
 - (id)init {
     self = [super initWithWindowNibName:@"SQAboutWindow"];
     return self;
 }
 
-- (void)windowDidLoad {
-    [super windowDidLoad];
-
+- (void)awakeFromNib {
     // set version
     NSString *semanticVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
     NSString *build = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
     [version setStringValue:[NSString stringWithFormat:@"%@ build %@", semanticVersion, build]];
-    
+
+    // linkify text
+    [homepageLink setAttributedStringValue:
+     [NSAttributedString hyperlinkFromString:@"http://footle.org/Squeeler"
+                                     withURL:[NSURL URLWithString:@"http://footle.org/Squeeler/"]]];
+    homepageLink.linkDelegate = self;
+
     [self.window center];
+}
+
+- (void)linkClicked:(id)sender {
+    // close the about window
+    [self.window close];
 }
 
 @end
