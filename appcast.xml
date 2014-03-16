@@ -6,8 +6,13 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 1.2</title>
+            <title>Version 1.2.1</title>
             <description><![CDATA[
+<h3>Version 1.2.1</h3>
+<ul>
+  <li>Added link to homepage in about dialog</li>
+</ul>
+
 <h3>Version 1.2</h3>
 <ul>
   <li>Added Recent Hogs menu</li>
@@ -15,18 +20,18 @@
 
 <h3>Version 1.1</h3>
 <ul>
-  <li>Status bar icon turns yellow when there's been an alert.</li>
-  <li>Proper retina images.</li>
+  <li>Status bar icon turns yellow when there's been an alert</li>
+  <li>Proper retina images</li>
 </ul>
 
 <h3>Version 1.0</h3>
 <ul>
-  <li>Initial release.</li>
+  <li>Initial release</li>
 </ul>
     ]]>
             </description>
-            <pubDate>Sat, 15 March 2014 16:15:12 -0700</pubDate>
-            <enclosure url="https://github.com/bgreenlee/Squeeler/blob/master/download/Squeeler.app.zip?raw=true" sparkle:version="20" sparkle:shortVersionString="1.2" length="1841313" type="application/octet-stream" />
+            <pubDate>Sat, 15 March 2014 20:31:27 -0700</pubDate>
+            <enclosure url="http://footle.org/Squeeler/downloads/Squeeler.app.zip" sparkle:version="23" sparkle:shortVersionString="1.2.1" length="1845021" type="application/octet-stream" />
         </item>
     </channel>
 </rss>
