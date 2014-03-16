@@ -6,8 +6,13 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 1.2.1</title>
+            <title>Version 1.2.2</title>
             <description><![CDATA[
+<h3>Version 1.2.2</h3>
+<ul>
+  <li>Fixed size of version field in about dialog</li>
+</ul>
+
 <h3>Version 1.2.1</h3>
 <ul>
   <li>Added link to homepage in about dialog</li>
@@ -31,7 +36,7 @@
     ]]>
             </description>
             <pubDate>Sat, 15 March 2014 20:31:27 -0700</pubDate>
-            <enclosure url="http://footle.org/Squeeler/downloads/Squeeler.app.zip" sparkle:version="23" sparkle:shortVersionString="1.2.1" length="1845021" type="application/octet-stream" />
+            <enclosure url="http://footle.org/Squeeler/downloads/Squeeler.app.zip" sparkle:version="25" sparkle:shortVersionString="1.2.2" length="1845004" type="application/octet-stream" />
         </item>
     </channel>
 </rss>
