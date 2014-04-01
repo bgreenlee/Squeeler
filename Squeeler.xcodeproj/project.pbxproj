@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A211628718BA9A4900C0FC58 /* SQAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211628618BA9A4900C0FC58 /* SQAboutWindow.xib */; };
-		A211629018BAA4C000C0FC58 /* SQAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211628E18BAA4C000C0FC58 /* SQAboutWindowController.m */; };
+		A211628718BA9A4900C0FC58 /* SQAboutView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A211628618BA9A4900C0FC58 /* SQAboutView.xib */; };
+		A211629018BAA4C000C0FC58 /* SQAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A211628E18BAA4C000C0FC58 /* SQAboutViewController.m */; };
 		A219175D18B5980800C9256F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A219175C18B5980800C9256F /* Cocoa.framework */; };
 		A219176718B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219176518B5980800C9256F /* InfoPlist.strings */; };
 		A219176918B5980800C9256F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A219176818B5980800C9256F /* main.m */; };
@@ -21,14 +21,18 @@
 		A219178518B5980800C9256F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A219178318B5980800C9256F /* InfoPlist.strings */; };
 		A219178718B5980800C9256F /* SqueelerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A219178618B5980800C9256F /* SqueelerTests.m */; };
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
-		A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */; };
-		A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */; };
+		A25EDB3918CC248D00332F8F /* SQGeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */; };
+		A25EDB3A18CC248D00332F8F /* SQGeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */; };
 		A2844BF218D40847000E364A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A2844BF318D40855000E364A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29E850A18D15B240095976F /* LaunchAtLoginController.m */; };
 		A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */ = {isa = PBXBuildFile; fileRef = A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */; };
 		A29E851018D15B240095976F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A29E850C18D15B240095976F /* LICENSE */; };
 		A29E851118D15B240095976F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A29E850D18D15B240095976F /* README.md */; };
+		A2DBE5A718E51FD400F574F0 /* LICENSE.md in Resources */ = {isa = PBXBuildFile; fileRef = A2DBE59F18E51FD400F574F0 /* LICENSE.md */; };
+		A2DBE5A918E51FD400F574F0 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2DBE5A218E51FD400F574F0 /* MASPreferencesWindow.xib */; };
+		A2DBE5AA18E51FD400F574F0 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DBE5A418E51FD400F574F0 /* MASPreferencesWindowController.m */; };
+		A2DBE5AE18E5282F00F574F0 /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */; };
 		A2FDEB9918D5193100387C11 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */; };
 		A2FDEB9C18D5233000387C11 /* HyperlinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9B18D5233000387C11 /* HyperlinkTextField.m */; };
 /* End PBXBuildFile section */
@@ -57,9 +61,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A211628618BA9A4900C0FC58 /* SQAboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQAboutWindow.xib; sourceTree = "<group>"; };
-		A211628D18BAA4C000C0FC58 /* SQAboutWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAboutWindowController.h; sourceTree = "<group>"; };
-		A211628E18BAA4C000C0FC58 /* SQAboutWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAboutWindowController.m; sourceTree = "<group>"; };
+		A211628618BA9A4900C0FC58 /* SQAboutView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQAboutView.xib; sourceTree = "<group>"; };
+		A211628D18BAA4C000C0FC58 /* SQAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQAboutViewController.h; sourceTree = "<group>"; };
+		A211628E18BAA4C000C0FC58 /* SQAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQAboutViewController.m; sourceTree = "<group>"; };
 		A219175918B5980800C9256F /* Squeeler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Squeeler.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A219175C18B5980800C9256F /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		A219175F18B5980800C9256F /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -81,15 +85,22 @@
 		A219178618B5980800C9256F /* SqueelerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SqueelerTests.m; sourceTree = "<group>"; };
 		A219179018B7BB4200C9256F /* SQProcessTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQProcessTracker.h; sourceTree = "<group>"; };
 		A219179118B7BB4200C9256F /* SQProcessTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQProcessTracker.m; sourceTree = "<group>"; };
-		A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
-		A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
-		A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQPreferencesWindow.xib; sourceTree = "<group>"; };
+		A25EDB3618CC248D00332F8F /* SQGeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGeneralPreferencesViewController.h; sourceTree = "<group>"; };
+		A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGeneralPreferencesViewController.m; sourceTree = "<group>"; };
+		A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQGeneralPreferencesView.xib; sourceTree = "<group>"; };
 		A2844BF118D40847000E364A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A29E850918D15B240095976F /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		A29E850A18D15B240095976F /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
 		A29E850B18D15B240095976F /* LaunchAtLoginController.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LaunchAtLoginController.podspec; sourceTree = "<group>"; };
 		A29E850C18D15B240095976F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A29E850D18D15B240095976F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		A2DBE59F18E51FD400F574F0 /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.md; sourceTree = "<group>"; };
+		A2DBE5A118E51FD400F574F0 /* MASPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesViewController.h; sourceTree = "<group>"; };
+		A2DBE5A218E51FD400F574F0 /* MASPreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MASPreferencesWindow.xib; sourceTree = "<group>"; };
+		A2DBE5A318E51FD400F574F0 /* MASPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASPreferencesWindowController.h; sourceTree = "<group>"; };
+		A2DBE5A418E51FD400F574F0 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
+		A2DBE5AC18E5282F00F574F0 /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
+		A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
 		A2FDEB9718D5193100387C11 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		A2FDEB9A18D5233000387C11 /* HyperlinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkTextField.h; sourceTree = "<group>"; };
@@ -166,13 +177,15 @@
 				A219176F18B5980800C9256F /* SQAppDelegate.m */,
 				A219179018B7BB4200C9256F /* SQProcessTracker.h */,
 				A219179118B7BB4200C9256F /* SQProcessTracker.m */,
+				A2DBE5AC18E5282F00F574F0 /* SQPreferencesWindowController.h */,
+				A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */,
+				A25EDB3618CC248D00332F8F /* SQGeneralPreferencesViewController.h */,
+				A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */,
+				A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */,
+				A211628D18BAA4C000C0FC58 /* SQAboutViewController.h */,
+				A211628E18BAA4C000C0FC58 /* SQAboutViewController.m */,
+				A211628618BA9A4900C0FC58 /* SQAboutView.xib */,
 				A219177118B5980800C9256F /* MainMenu.xib */,
-				A25EDB3618CC248D00332F8F /* SQPreferencesWindowController.h */,
-				A25EDB3718CC248D00332F8F /* SQPreferencesWindowController.m */,
-				A25EDB3818CC248D00332F8F /* SQPreferencesWindow.xib */,
-				A211628D18BAA4C000C0FC58 /* SQAboutWindowController.h */,
-				A211628E18BAA4C000C0FC58 /* SQAboutWindowController.m */,
-				A211628618BA9A4900C0FC58 /* SQAboutWindow.xib */,
 				A219177418B5980800C9256F /* Images.xcassets */,
 				A219176318B5980800C9256F /* Supporting Files */,
 			);
@@ -212,6 +225,7 @@
 		A29E850718D15B050095976F /* Other Sources */ = {
 			isa = PBXGroup;
 			children = (
+				A2DBE59D18E51FD400F574F0 /* MASPreferences */,
 				A2FDEB9618D5193100387C11 /* NSAttributedString+Hyperlink */,
 				A29E850818D15B240095976F /* LaunchAtLoginController */,
 			);
@@ -228,6 +242,18 @@
 				A29E850D18D15B240095976F /* README.md */,
 			);
 			path = LaunchAtLoginController;
+			sourceTree = "<group>";
+		};
+		A2DBE59D18E51FD400F574F0 /* MASPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				A2DBE59F18E51FD400F574F0 /* LICENSE.md */,
+				A2DBE5A118E51FD400F574F0 /* MASPreferencesViewController.h */,
+				A2DBE5A218E51FD400F574F0 /* MASPreferencesWindow.xib */,
+				A2DBE5A318E51FD400F574F0 /* MASPreferencesWindowController.h */,
+				A2DBE5A418E51FD400F574F0 /* MASPreferencesWindowController.m */,
+			);
+			path = MASPreferences;
 			sourceTree = "<group>";
 		};
 		A2FDEB9618D5193100387C11 /* NSAttributedString+Hyperlink */ = {
@@ -329,14 +355,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */,
-				A25EDB3A18CC248D00332F8F /* SQPreferencesWindow.xib in Resources */,
+				A25EDB3A18CC248D00332F8F /* SQGeneralPreferencesView.xib in Resources */,
 				A29E851118D15B240095976F /* README.md in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
+				A2DBE5A918E51FD400F574F0 /* MASPreferencesWindow.xib in Resources */,
 				A29E851018D15B240095976F /* LICENSE in Resources */,
-				A211628718BA9A4900C0FC58 /* SQAboutWindow.xib in Resources */,
+				A211628718BA9A4900C0FC58 /* SQAboutView.xib in Resources */,
 				A219176D18B5980800C9256F /* Credits.rtf in Resources */,
 				A219177318B5980800C9256F /* MainMenu.xib in Resources */,
+				A2DBE5A718E51FD400F574F0 /* LICENSE.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +402,11 @@
 			files = (
 				A219176918B5980800C9256F /* main.m in Sources */,
 				A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */,
-				A25EDB3918CC248D00332F8F /* SQPreferencesWindowController.m in Sources */,
+				A2DBE5AE18E5282F00F574F0 /* SQPreferencesWindowController.m in Sources */,
+				A25EDB3918CC248D00332F8F /* SQGeneralPreferencesViewController.m in Sources */,
 				A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */,
-				A211629018BAA4C000C0FC58 /* SQAboutWindowController.m in Sources */,
+				A2DBE5AA18E51FD400F574F0 /* MASPreferencesWindowController.m in Sources */,
+				A211629018BAA4C000C0FC58 /* SQAboutViewController.m in Sources */,
 				A219177018B5980800C9256F /* SQAppDelegate.m in Sources */,
 				A2FDEB9C18D5233000387C11 /* HyperlinkTextField.m in Sources */,
 				A2FDEB9918D5193100387C11 /* NSAttributedString+Hyperlink.m in Sources */,

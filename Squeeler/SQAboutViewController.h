@@ -8,11 +8,13 @@
 
 #import <Cocoa/Cocoa.h>
 #import "NSAttributedString+Hyperlink.h"
+#import "MASPreferencesViewController.h"
 
-@interface SQAboutWindowController : NSWindowController <HyperlinkTextFieldDelegate>
+@interface SQAboutViewController : NSViewController <HyperlinkTextFieldDelegate, MASPreferencesViewController>
 
 @property(nonatomic) IBOutlet NSTextField *version;
 @property(nonatomic) IBOutlet HyperlinkTextField *homepageLink;
+@property(nonatomic) NSWindow *parentWindow;
 
 - (void)linkClicked:(id)sender;
 

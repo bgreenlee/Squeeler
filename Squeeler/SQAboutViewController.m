@@ -6,18 +6,37 @@
 //  Copyright (c) 2014 HackArts. All rights reserved.
 //
 
-#import "SQAboutWindowController.h"
+#import "SQAboutViewController.h"
 
-@interface SQAboutWindowController ()
+@interface SQAboutViewController ()
 
 @end
 
-@implementation SQAboutWindowController
+@implementation SQAboutViewController
 @synthesize version;
 @synthesize homepageLink;
+@synthesize parentWindow;
+
+#pragma mark -
+#pragma mark MASPreferencesViewController
+
+- (NSString *)identifier {
+    return @"About";
+}
+
+- (NSImage *)toolbarItemImage {
+    return [NSImage imageNamed:@"AppIcon"];
+}
+
+- (NSString *)toolbarItemLabel {
+    return NSLocalizedString(@"About", @"Toolbar item name for the about pane");
+}
+
+#pragma mark -
+#pragma mark SQAboutViewController
 
 - (id)init {
-    self = [super initWithWindowNibName:@"SQAboutWindow"];
+    self = [super initWithNibName:@"SQAboutView" bundle:nil];
     return self;
 }
 
@@ -32,13 +51,10 @@
      [NSAttributedString hyperlinkFromString:@"http://footle.org/Squeeler"
                                      withURL:[NSURL URLWithString:@"http://footle.org/Squeeler/"]]];
     homepageLink.linkDelegate = self;
-
-    [self.window center];
 }
 
 - (void)linkClicked:(id)sender {
-    // close the about window
-    [self.window close];
+    [parentWindow close];
 }
 
 @end

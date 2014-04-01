@@ -678,12 +678,6 @@
                         <action selector="checkForUpdates:" target="b9R-2c-4MS" id="3Ew-U4-GO2"/>
                     </connections>
                 </menuItem>
-                <menuItem title="About Squeeler" id="y2p-R6-bNe">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="showAbout:" target="494" id="x07-BR-KmJ"/>
-                    </connections>
-                </menuItem>
                 <menuItem isSeparatorItem="YES" id="bcY-Ea-e7v"/>
                 <menuItem title="Quit Squeeler" id="M2P-tD-wOb">
                     <modifierMask key="keyEquivalentModifierMask"/>

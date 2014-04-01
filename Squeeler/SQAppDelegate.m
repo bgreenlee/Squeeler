@@ -12,8 +12,7 @@
 #define MAX_RECENT_HOGS 5
 
 @implementation SQAppDelegate
-@synthesize preferencesWindowController;
-@synthesize aboutWindowController;
+//@synthesize preferencesWindowController;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [NSApp setDelegate:self];
@@ -95,24 +94,29 @@
     }
 }
 
-- (IBAction) showPreferences:(id)sender {
-    if (preferencesWindowController == nil) {
-        preferencesWindowController = [[SQPreferencesWindowController alloc] init];
+- (NSWindowController *)preferencesWindowController {
+    if (_preferencesWindowController == nil) {
+        _preferencesWindowController = [[SQPreferencesWindowController alloc] init];
+//        _preferencesWindowController.delegate = self;
     }
-    [preferencesWindowController showWindow:self];
-    [preferencesWindowController.window setReleasedWhenClosed:NO];
-    [preferencesWindowController.window center];
-    [preferencesWindowController.window setLevel: NSMainMenuWindowLevel];
+    return _preferencesWindowController;
 }
 
-- (IBAction) showAbout:(id)sender {
-    if (aboutWindowController == nil) {
-        aboutWindowController = [[SQAboutWindowController alloc] init];
-    }
-    [aboutWindowController showWindow:self];
-    [aboutWindowController.window setReleasedWhenClosed:NO];
-    [aboutWindowController.window center];
-    [aboutWindowController.window setLevel: NSMainMenuWindowLevel];
+- (IBAction) showPreferences:(id)sender {
+    [self.preferencesWindowController showWindow:nil];
+//    [preferencesWindowController.window setReleasedWhenClosed:NO];
+//    [preferencesWindowController.window center];
+//    [preferencesWindowController.window setLevel: NSMainMenuWindowLevel];
 }
+
+//- (IBAction) showAbout:(id)sender {
+//    if (aboutWindowController == nil) {
+//        aboutWindowController = [[SQAboutViewController alloc] init];
+//    }
+//    [aboutWindowController showWindow:self];
+//    [aboutWindowController.window setReleasedWhenClosed:NO];
+//    [aboutWindowController.window center];
+//    [aboutWindowController.window setLevel: NSMainMenuWindowLevel];
+//}
 
 @end

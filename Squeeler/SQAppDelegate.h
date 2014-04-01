@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "SQProcessTracker.h"
 #import "SQPreferencesWindowController.h"
-#import "SQAboutWindowController.h"
+#import "SQAboutViewController.h"
 
 @interface SQAppDelegate : NSObject <NSApplicationDelegate, HCProcessTrackerDelegate, NSUserNotificationCenterDelegate, NSUserNotificationCenterDelegate, NSMenuDelegate> {
     IBOutlet NSMenu *statusMenu;
@@ -17,14 +17,13 @@
     NSImage *statusImage;
     NSImage *statusHighlightImage;
     SQProcessTracker *processTracker;
+    SQPreferencesWindowController *_preferencesWindowController;
 }
 
 - (void) updateSettingsWithCpuUsage:(NSInteger)cpuUsage
                           alertTime:(NSInteger)alertTime
                          alertReset:(NSInteger)alertReset;
 - (IBAction) showPreferences:(id)sender;
-- (IBAction) showAbout:(id)sender;
+//- (IBAction) showAbout:(id)sender;
 
-@property (strong) SQPreferencesWindowController* preferencesWindowController;
-@property (strong) SQAboutWindowController* aboutWindowController;
 @end
