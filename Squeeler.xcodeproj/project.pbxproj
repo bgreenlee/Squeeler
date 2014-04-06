@@ -23,6 +23,7 @@
 		A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = A219179118B7BB4200C9256F /* SQProcessTracker.m */; };
 		A25EDB3918CC248D00332F8F /* SQGeneralPreferencesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */; };
 		A25EDB3A18CC248D00332F8F /* SQGeneralPreferencesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */; };
+		A28124BB18F07F4500B1010B /* SQApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = A28124BA18F07F4500B1010B /* SQApplication.m */; };
 		A2844BF218D40847000E364A /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A2844BF318D40855000E364A /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = A2844BF118D40847000E364A /* Sparkle.framework */; };
 		A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A29E850A18D15B240095976F /* LaunchAtLoginController.m */; };
@@ -33,6 +34,8 @@
 		A2DBE5A918E51FD400F574F0 /* MASPreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2DBE5A218E51FD400F574F0 /* MASPreferencesWindow.xib */; };
 		A2DBE5AA18E51FD400F574F0 /* MASPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DBE5A418E51FD400F574F0 /* MASPreferencesWindowController.m */; };
 		A2DBE5AE18E5282F00F574F0 /* SQPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */; };
+		A2DCF0FE18EA744D004D1653 /* SQIgnoredProcessesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2DCF0FD18EA744D004D1653 /* SQIgnoredProcessesView.xib */; };
+		A2E37C4C18EBB8EB001873A0 /* SQIgnoredProcessesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E37C4B18EBB8EB001873A0 /* SQIgnoredProcessesViewController.m */; };
 		A2FDEB9918D5193100387C11 /* NSAttributedString+Hyperlink.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */; };
 		A2FDEB9C18D5233000387C11 /* HyperlinkTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = A2FDEB9B18D5233000387C11 /* HyperlinkTextField.m */; };
 /* End PBXBuildFile section */
@@ -88,6 +91,8 @@
 		A25EDB3618CC248D00332F8F /* SQGeneralPreferencesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQGeneralPreferencesViewController.h; sourceTree = "<group>"; };
 		A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQGeneralPreferencesViewController.m; sourceTree = "<group>"; };
 		A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQGeneralPreferencesView.xib; sourceTree = "<group>"; };
+		A28124B918F07F4500B1010B /* SQApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQApplication.h; sourceTree = "<group>"; };
+		A28124BA18F07F4500B1010B /* SQApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQApplication.m; sourceTree = "<group>"; };
 		A2844BF118D40847000E364A /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		A29E850918D15B240095976F /* LaunchAtLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchAtLoginController.h; sourceTree = "<group>"; };
 		A29E850A18D15B240095976F /* LaunchAtLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchAtLoginController.m; sourceTree = "<group>"; };
@@ -101,6 +106,9 @@
 		A2DBE5A418E51FD400F574F0 /* MASPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASPreferencesWindowController.m; sourceTree = "<group>"; };
 		A2DBE5AC18E5282F00F574F0 /* SQPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQPreferencesWindowController.h; sourceTree = "<group>"; };
 		A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQPreferencesWindowController.m; sourceTree = "<group>"; };
+		A2DCF0FD18EA744D004D1653 /* SQIgnoredProcessesView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SQIgnoredProcessesView.xib; sourceTree = "<group>"; };
+		A2E37C4A18EBB8EB001873A0 /* SQIgnoredProcessesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQIgnoredProcessesViewController.h; sourceTree = "<group>"; };
+		A2E37C4B18EBB8EB001873A0 /* SQIgnoredProcessesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQIgnoredProcessesViewController.m; sourceTree = "<group>"; };
 		A2FDEB9718D5193100387C11 /* NSAttributedString+Hyperlink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Hyperlink.h"; sourceTree = "<group>"; };
 		A2FDEB9818D5193100387C11 /* NSAttributedString+Hyperlink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Hyperlink.m"; sourceTree = "<group>"; };
 		A2FDEB9A18D5233000387C11 /* HyperlinkTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HyperlinkTextField.h; sourceTree = "<group>"; };
@@ -177,11 +185,16 @@
 				A219176F18B5980800C9256F /* SQAppDelegate.m */,
 				A219179018B7BB4200C9256F /* SQProcessTracker.h */,
 				A219179118B7BB4200C9256F /* SQProcessTracker.m */,
+				A28124B918F07F4500B1010B /* SQApplication.h */,
+				A28124BA18F07F4500B1010B /* SQApplication.m */,
 				A2DBE5AC18E5282F00F574F0 /* SQPreferencesWindowController.h */,
 				A2DBE5AD18E5282F00F574F0 /* SQPreferencesWindowController.m */,
 				A25EDB3618CC248D00332F8F /* SQGeneralPreferencesViewController.h */,
 				A25EDB3718CC248D00332F8F /* SQGeneralPreferencesViewController.m */,
 				A25EDB3818CC248D00332F8F /* SQGeneralPreferencesView.xib */,
+				A2E37C4A18EBB8EB001873A0 /* SQIgnoredProcessesViewController.h */,
+				A2E37C4B18EBB8EB001873A0 /* SQIgnoredProcessesViewController.m */,
+				A2DCF0FD18EA744D004D1653 /* SQIgnoredProcessesView.xib */,
 				A211628D18BAA4C000C0FC58 /* SQAboutViewController.h */,
 				A211628E18BAA4C000C0FC58 /* SQAboutViewController.m */,
 				A211628618BA9A4900C0FC58 /* SQAboutView.xib */,
@@ -356,6 +369,7 @@
 			files = (
 				A29E850F18D15B240095976F /* LaunchAtLoginController.podspec in Resources */,
 				A25EDB3A18CC248D00332F8F /* SQGeneralPreferencesView.xib in Resources */,
+				A2DCF0FE18EA744D004D1653 /* SQIgnoredProcessesView.xib in Resources */,
 				A29E851118D15B240095976F /* README.md in Resources */,
 				A219176718B5980800C9256F /* InfoPlist.strings in Resources */,
 				A219177518B5980800C9256F /* Images.xcassets in Resources */,
@@ -403,8 +417,10 @@
 				A219176918B5980800C9256F /* main.m in Sources */,
 				A219179218B7BB4200C9256F /* SQProcessTracker.m in Sources */,
 				A2DBE5AE18E5282F00F574F0 /* SQPreferencesWindowController.m in Sources */,
+				A2E37C4C18EBB8EB001873A0 /* SQIgnoredProcessesViewController.m in Sources */,
 				A25EDB3918CC248D00332F8F /* SQGeneralPreferencesViewController.m in Sources */,
 				A29E850E18D15B240095976F /* LaunchAtLoginController.m in Sources */,
+				A28124BB18F07F4500B1010B /* SQApplication.m in Sources */,
 				A2DBE5AA18E51FD400F574F0 /* MASPreferencesWindowController.m in Sources */,
 				A211629018BAA4C000C0FC58 /* SQAboutViewController.m in Sources */,
 				A219177018B5980800C9256F /* SQAppDelegate.m in Sources */,

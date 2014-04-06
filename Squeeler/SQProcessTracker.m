@@ -9,10 +9,11 @@
 #import "SQProcessTracker.h"
 #import <sys/proc_info.h>
 #import <libproc.h>
-
+#import "SQApplication.h"
 
 @implementation SQProcessTracker
 @synthesize delegate;
+@synthesize ignoredApplications;
 
 - (id)init {
     if ((self = [super init])) {
@@ -32,6 +33,7 @@
         if (self.alertReset == 0) {
             self.alertReset = DEFAULT_ALERT_RESET;
         }
+        ignoredApplications = [NSSet setWithArray:[defaults arrayForKey:@"ignoredApplications"]];
     }
     return self;
 }
@@ -96,31 +98,24 @@
 
 /*
  * getProcessName returns a the name of a process given a pid
- * It seems like the only way to get the full process name is to
- * extract it from the executable path.
+ * It seems like the only way to get the full process name is to extract it from the executable path.
  */
-- (NSString *) processNameForPid:(pid_t) pid {
+- (NSString *) processPathForPid:(pid_t) pid {
     NSString *processName;
     char pathBuffer[PROC_PIDPATHINFO_MAXSIZE];
     bzero(pathBuffer, PROC_PIDPATHINFO_MAXSIZE);
     proc_pidpath(pid, pathBuffer, sizeof(pathBuffer));
     if (strlen(pathBuffer) > 0) {
-        // get last component of path
-        char *lastSlash = strrchr(pathBuffer, '/');
-        char *processNamePtr;
-        if (lastSlash != NULL) {
-            processNamePtr = lastSlash + 1;
-        } else {
-            processNamePtr = pathBuffer;
-        }
-        processName = [NSString stringWithCString:processNamePtr encoding:NSASCIIStringEncoding];
-//        NSLog(@"proccessName: %@", processName);
+        processName = [NSString stringWithCString:pathBuffer encoding:NSASCIIStringEncoding];
     } else {
-//        NSLog(@"no pathBuffer!");
         processName = [NSString stringWithFormat:@"Process #%d", pid];
     }
     
     return processName;
+}
+
+- (NSString *)processNameFromPath:(NSString *)path {
+    return [[path componentsSeparatedByString:@"/"] lastObject];
 }
 
 - (void)updateProcessStatus:(NSDictionary *)lastProcessStatus {
@@ -140,13 +135,17 @@
         } else {
             NSInteger intCounter = [(NSNumber *)counter integerValue];
             if ([lastCPU integerValue] > self.cpuUsageThreshold) {
-                if (intCounter >= self.alertTime / CHECK_INTERVAL) {
+                pid_t pid = [pidStr intValue];
+                // see if we should ignore it
+                NSString *processPath = [self processPathForPid:pid];
+                if ([ignoredApplications containsObject:processPath]) {
+                    NSLog(@"ignoring %@", [self processNameFromPath:processPath]);
+                } else if (intCounter >= self.alertTime / CHECK_INTERVAL) {
                     // check that we haven't alerted on this process recently
                     NSDate *lastAlert = [alertedProcesses objectForKey:pidStr];
                     if (lastAlert == nil || [lastAlert timeIntervalSinceNow] < -self.alertReset) {
                         [alertedProcesses setObject:[NSDate date] forKey:pidStr];
-                        pid_t pid = [pidStr intValue];
-                        [delegate handleProcessAlertWithPid:pid processName:[self processNameForPid:pid]];  // send notification
+                        [delegate handleProcessAlertWithPid:pid processName:[self processNameFromPath:[self processPathForPid:pid]]];  // send notification
                     }
                     [processes setValue:[NSNumber numberWithInteger:0] forKey:pidStr]; // reset so we're not continually spamming
                 } else {
@@ -167,5 +166,19 @@
     [newPids enumerateObjectsUsingBlock:^(id pid, BOOL *stop) {
         [processes setValue:[NSNumber numberWithInteger:0] forKey:pid];
     }];
+}
+
+// return a list of names of unique executables currently running
+- (NSArray *)runningUniqueApplications {
+    NSMutableSet *apps = [[NSMutableSet alloc] init];
+    [processes enumerateKeysAndObjectsUsingBlock:^(id pidStr, id counter, BOOL *stop) {
+        int pid = [pidStr intValue];
+        SQApplication *app = [[SQApplication alloc] init];
+        app.path = [self processPathForPid:pid];
+        app.icon = [[NSRunningApplication runningApplicationWithProcessIdentifier:pid] icon];
+        [apps addObject:app];
+    }];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES];
+    return [apps sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
 }
 @end

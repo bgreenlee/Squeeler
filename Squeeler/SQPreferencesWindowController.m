@@ -15,12 +15,19 @@
 @implementation SQPreferencesWindowController
 
 - (id)init {
-    SQGeneralPreferencesViewController *_generalPreferencesViewController = [[SQGeneralPreferencesViewController alloc] init];
-    SQAboutViewController *_aboutViewController = [[SQAboutViewController alloc] init];
-    NSArray *controllers = [[NSArray alloc] initWithObjects:_generalPreferencesViewController, _aboutViewController, nil];
+    SQGeneralPreferencesViewController *_generalPreferencesViewController =
+        [[SQGeneralPreferencesViewController alloc] init];
+    SQIgnoredProcessesViewController *_ignoredProcessesViewController =
+        [[SQIgnoredProcessesViewController alloc] init];
+    SQAboutViewController *_aboutViewController =
+        [[SQAboutViewController alloc] init];
+    NSArray *controllers = [[NSArray alloc] initWithObjects:_generalPreferencesViewController,
+                                                            _ignoredProcessesViewController,
+                                                            _aboutViewController, nil];
     NSString *title = NSLocalizedString(@"Preferences", @"Common title for Preferences window");
     if ((self = [super initWithViewControllers:controllers title:title])) {
         generalPreferencesViewController = _generalPreferencesViewController;
+        ignoredProcessesViewController = _ignoredProcessesViewController;
         aboutViewController = _aboutViewController;
         aboutViewController.parentWindow = self.window;
     }
@@ -37,6 +44,7 @@
 -(BOOL)windowShouldClose:(id)sender {
 #pragma unused (sender)
     [generalPreferencesViewController saveSettings];
+    [ignoredProcessesViewController saveSettings];
     return YES;
 }
 

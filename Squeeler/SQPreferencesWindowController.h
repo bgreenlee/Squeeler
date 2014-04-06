@@ -8,10 +8,12 @@
 
 #import "MASPreferencesWindowController.h"
 #import "SQGeneralPreferencesViewController.h"
+#import "SQIgnoredProcessesViewController.h"
 #import "SQAboutViewController.h"
 
 @interface SQPreferencesWindowController : MASPreferencesWindowController {
     SQGeneralPreferencesViewController *generalPreferencesViewController;
+    SQIgnoredProcessesViewController *ignoredProcessesViewController;
     SQAboutViewController *aboutViewController;
 }
 

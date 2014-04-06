@@ -16,13 +16,16 @@
     NSStatusItem *statusItem;
     NSImage *statusImage;
     NSImage *statusHighlightImage;
-    SQProcessTracker *processTracker;
+//    SQProcessTracker *processTracker;
     SQPreferencesWindowController *_preferencesWindowController;
 }
+
+@property(nonatomic) SQProcessTracker *processTracker;
 
 - (void) updateSettingsWithCpuUsage:(NSInteger)cpuUsage
                           alertTime:(NSInteger)alertTime
                          alertReset:(NSInteger)alertReset;
+- (void) updateIgnoredApplicationsWithArray:(NSArray *)ignoredApplications;
 - (IBAction) showPreferences:(id)sender;
 //- (IBAction) showAbout:(id)sender;
 

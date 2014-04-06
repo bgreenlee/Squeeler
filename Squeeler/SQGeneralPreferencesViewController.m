@@ -49,10 +49,6 @@
     [self loadSettings];
 }
 
-//- (void)windowWillClose:(NSNotification *)notification {
-//    [self saveSettings];
-//}
-
 - (void)loadSettings {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 

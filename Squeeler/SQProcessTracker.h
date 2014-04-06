@@ -26,10 +26,12 @@
 @property (readwrite) NSInteger cpuUsageThreshold;
 @property (readwrite) NSInteger alertTime;
 @property (readwrite) NSInteger alertReset;
+@property (nonatomic) NSSet *ignoredApplications;
 
 - (id)init;
 - (id)initWithDelegate:(id <HCProcessTrackerDelegate>)delegate;
 - (void)setDelegate:(id <HCProcessTrackerDelegate>)delegate;
 - (void)start;
+- (NSArray *)runningUniqueApplications;
 
 @end

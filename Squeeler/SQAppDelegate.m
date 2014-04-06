@@ -12,7 +12,7 @@
 #define MAX_RECENT_HOGS 5
 
 @implementation SQAppDelegate
-//@synthesize preferencesWindowController;
+@synthesize processTracker;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [NSApp setDelegate:self];
@@ -68,6 +68,10 @@
     processTracker.cpuUsageThreshold = cpuUsage;
     processTracker.alertTime = alertTime;
     processTracker.alertReset = alertReset;
+}
+
+- (void) updateIgnoredApplicationsWithArray:(NSArray *)ignoredApplications {
+    processTracker.ignoredApplications = [NSSet setWithArray:ignoredApplications];
 }
 
 - (void) menuWillOpen:(NSMenu *)menu {
